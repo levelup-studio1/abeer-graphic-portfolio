@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abeer Abdallah Jama | Creative Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Inter', sans-serif;
+}
+
+.slide { width: 1400px; position: relative; overflow: hidden; }
+
+/* ── COVER ───────────────────────────────── */
+.cover {
+  height: 860px; background: #fff;
+  display: flex; flex-direction: column; justify-content: space-between;
+  padding: 48px 64px 0;
+}
+.cover-top { display:flex; justify-content:space-between; align-items:flex-start; }
+.globe { width:44px; height:44px; margin-bottom:10px; }
+.cover-date { font-size:12px; font-weight:400; color:#111; letter-spacing:.5px; }
+.cover-pres-label { font-size:13px; font-weight:700; color:#111; margin-top:2px; }
+.cover-pres-name  { font-size:13px; font-weight:400; color:#111; }
+.cover-hero { text-align:center; position:absolute; bottom:80px; left:0; right:0; line-height:1; }
+.cover-hero-text { font-size:248px; font-weight:900; color:#111; letter-spacing:-10px; text-transform:uppercase; }
+.cover-bottom-bar {
+  height:72px; background:#111;
+  display:flex; align-items:center; justify-content:space-between; padding:0 64px;
+  position:absolute; bottom:0; left:0; right:0;
+}
+.cover-roles { display:flex; align-items:center; }
+.cover-role-item { font-size:13px; font-weight:400; color:#fff; letter-spacing:.5px; }
+.cover-role-sep  { font-size:13px; color:rgba(255,255,255,.3); margin:0 16px; }
+.cover-contact { display:flex; gap:40px; }
+.cover-contact-item { font-size:12px; font-weight:300; color:rgba(255,255,255,.7); }
+
+/* ── ABOUT ───────────────────────────────── */
+.about {
+  height:760px; background:#111;
+  display:flex; flex-direction:column; padding:52px 64px;
+}
+.slide-header { display:flex; justify-content:space-between; align-items:center; }
+.slide-label { font-size:12px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,.3); }
+.slide-year  { font-size:12px; font-weight:300; letter-spacing:2px; color:rgba(255,255,255,.3); }
+.about-body  { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:36px; flex:1; text-align:center; }
+.about-big-word { font-size:220px; font-weight:900; color:#fff; text-transform:uppercase; letter-spacing:-8px; line-height:.88; }
+.about-right { max-width:620px; }
+.about-arrow { width:72px; height:72px; margin-bottom:22px; opacity:.7; }
+.about-text { font-size:17px; font-weight:300; color:rgba(255,255,255,.75); line-height:1.85; }
+.about-name-line { margin-top:24px; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.55); }
+
+/* ── ABOUT ME (page 2) ───────────────────── */
+.about-me {
+  height:640px; background:#0a0a0a;
+  display:flex; flex-direction:column; justify-content:space-between; padding:52px 64px;
+}
+.me-big { font-size:180px; font-weight:900; color:#fff; text-transform:uppercase; letter-spacing:-6px; line-height:.88; }
+.me-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; margin-top:40px; }
+.me-card { background:#161616; padding:32px 28px; }
+.me-card-label { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#555; margin-bottom:10px; }
+.me-card-value { font-size:16px; font-weight:700; color:#fff; line-height:1.4; }
+.me-card-sub   { font-size:13px; font-weight:300; color:#666; margin-top:4px; }
+
+/* ── EXPERIENCE ──────────────────────────── */
+.experience {
+  height:720px; background:#fff;
+  padding:52px 64px;
+  display:flex; flex-direction:column; justify-content:space-between;
+}
+.exp-header { display:flex; justify-content:space-between; }
+.exp-header-label { font-size:12px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:rgba(0,0,0,.3); }
+.exp-big { display:flex; align-items:flex-end; justify-content:space-between; gap:80px; }
+.exp-big-word { font-size:196px; font-weight:900; color:#111; text-transform:uppercase; letter-spacing:-7px; line-height:.9; flex-shrink:0; }
+.exp-content { flex:1; padding-bottom:12px; }
+.exp-role    { font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#2B2CE8; margin-bottom:10px; }
+.exp-company { font-size:22px; font-weight:700; color:#111; margin-bottom:4px; }
+.exp-period  { font-size:13px; font-weight:300; color:#888; margin-bottom:24px; }
+.exp-bullets { list-style:none; display:flex; flex-direction:column; gap:10px; }
+.exp-bullets li { font-size:14px; font-weight:300; color:#444; line-height:1.6; padding-left:20px; position:relative; }
+.exp-bullets li::before { content:'▸'; position:absolute; left:0; color:#2B2CE8; font-size:12px; }
+.exp-bottom { display:flex; gap:48px; border-top:1px solid #eee; padding-top:28px; }
+.exp-stat-num   { font-size:40px; font-weight:900; color:#111; letter-spacing:-1px; }
+.exp-stat-label { font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#aaa; margin-top:2px; }
+
+/* ── SKILLS ──────────────────────────────── */
+.skills {
+  height:800px; background:#111;
+  padding:52px 64px;
+  display:flex; flex-direction:column; justify-content:space-between;
+}
+.skills-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; flex:1; margin-top:36px; }
+.skill-card {
+  background:#1c1c1c; padding:44px 40px;
+  display:flex; flex-direction:column; justify-content:space-between;
+  border-top:3px solid #2B2CE8;
+}
+.skill-num   { font-size:12px; font-weight:700; letter-spacing:3px; color:rgba(255,255,255,.25); }
+.skill-title { font-size:28px; font-weight:800; color:#fff; line-height:1.15; margin-top:auto; padding-top:24px; }
+.skill-sub   { font-size:14px; font-weight:300; color:rgba(255,255,255,.5); margin-top:10px; line-height:1.6; }
+
+/* ── SOFTWARE PROFICIENCY ────────────────── */
+.software {
+  height:680px; background:#fff;
+  padding:52px 64px;
+  display:flex; flex-direction:column; justify-content:space-between;
+}
+.page-header-label { font-size:12px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:rgba(0,0,0,.3); }
+.software-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:2px; margin-top:40px; flex:1; }
+.sw-card { background:#f5f5f5; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:40px 16px; }
+.sw-icon  { font-size:36px; font-weight:900; letter-spacing:-1px; }
+.sw-name  { font-size:13px; font-weight:700; color:#111; text-transform:uppercase; letter-spacing:1px; text-align:center; }
+.sw-level { font-size:11px; font-weight:300; color:#888; letter-spacing:1px; text-align:center; }
+
+/* ── EDUCATION & LANGUAGES ───────────────── */
+.edu { height:580px; background:#fff; display:flex; }
+.edu-left  { flex:1; background:#111; padding:52px 64px; display:flex; flex-direction:column; justify-content:space-between; }
+.edu-right { flex:1; background:#fff; padding:52px 64px; display:flex; flex-direction:column; justify-content:space-between; }
+.edu-section-tag      { font-size:11px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:rgba(255,255,255,.3); }
+.edu-section-tag-dark { font-size:11px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:rgba(0,0,0,.3); }
+.edu-big      { font-size:88px; font-weight:900; color:#fff; text-transform:uppercase; letter-spacing:-3px; line-height:.9; }
+.edu-big-dark { font-size:88px; font-weight:900; color:#111; text-transform:uppercase; letter-spacing:-3px; line-height:.9; }
+.edu-item      { border-top:1px solid rgba(255,255,255,.1); padding-top:16px; margin-top:16px; }
+.edu-degree      { font-size:15px; font-weight:700; color:#fff; }
+.edu-school      { font-size:13px; font-weight:300; color:rgba(255,255,255,.5); margin-top:4px; }
+.edu-school-dark { font-size:13px; font-weight:300; color:#888; margin-top:4px; }
+.edu-degree-dark { font-size:15px; font-weight:700; color:#111; }
+.lang-item { display:flex; justify-content:space-between; align-items:center; border-top:1px solid #eee; padding:22px 0; }
+.lang-name  { font-size:26px; font-weight:700; color:#111; text-transform:uppercase; letter-spacing:-1px; }
+.lang-level { font-size:11px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#aaa; }
+
+/* ── SHARED WORK STYLES ──────────────────── */
+.section-intro {
+  height:420px;
+  display:flex; flex-direction:column; justify-content:space-between; padding:52px 64px;
+}
+.section-num { font-size:11px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:rgba(255,255,255,.25); }
+.section-big { font-size:180px; font-weight:900; text-transform:uppercase; letter-spacing:-6px; line-height:.88; }
+
+.img-full { width:1400px; }
+.img-full img { width:100%; height:auto; display:block; }
+
+.img-row { display:flex; gap:4px; align-items:stretch; }
+.img-row .img-col { flex:1; min-width:0; overflow:hidden; }
+.img-row .img-col img { width:100%; height:100%; object-fit:cover; display:block; }
+
+.img-brief { display:flex; }
+.img-brief .ib-img { flex:1; min-width:0; }
+.img-brief .ib-img img { width:100%; height:auto; display:block; }
+.img-brief .ib-text { width:460px; flex-shrink:0; padding:56px 52px; display:flex; flex-direction:column; justify-content:center; gap:18px; }
+
+.caption-bar {
+  padding:28px 64px;
+  display:flex; justify-content:space-between; align-items:center;
+  margin-top:-6px;
+}
+.caption-text { font-size:14px; font-weight:300; line-height:1.8; max-width:760px; }
+.caption-tags { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+.caption-tag {
+  border:1px solid rgba(255,255,255,.2); color:rgba(255,255,255,.6);
+  font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; padding:6px 14px;
+}
+
+.art-pair { display:flex; gap:4px; align-items:stretch; }
+.art-pair .art-small { width:40%; overflow:hidden; }
+.art-pair .art-large { width:60%; overflow:hidden; }
+.art-pair img { width:100%; height:100%; object-fit:cover; display:block; }
+
+.two-col { display:flex; gap:4px; }
+.two-col .col { flex:1; overflow:hidden; }
+.two-col .col img { width:100%; height:100%; object-fit:cover; display:block; }
+
+.img-text { display:flex; height:640px; }
+.img-text .it-img { flex:1; overflow:hidden; }
+.img-text .it-img img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
+.img-text .it-text { width:480px; padding:56px 52px; display:flex; flex-direction:column; justify-content:center; gap:18px; }
+.it-cat   { font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; }
+.it-title { font-size:40px; font-weight:900; line-height:1; letter-spacing:-1px; margin-top:4px; }
+.it-bar   { width:40px; height:3px; background:#2B2CE8; }
+.it-desc  { font-size:15px; font-weight:300; line-height:1.8; }
+.it-tags  { display:flex; gap:8px; flex-wrap:wrap; margin-top:4px; }
+
+.three-col { display:flex; gap:4px; height:700px; }
+.three-col .col-img { flex:1; overflow:hidden; }
+.three-col .col-img img {
+  width:100%; height:calc(100% + 80px);
+  object-fit:cover; object-position:center top; display:block;
+}
+
+/* ── ANIMATIONS ─────────────────────────── */
+
+@keyframes heroReveal {
+  from { opacity: 0; transform: translateY(36px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeFromTop {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeFromBottom {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.cover-hero-text {
+  animation: heroReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+.cover-top {
+  animation: fadeFromTop 1s cubic-bezier(0.16, 1, 0.3, 1) 0s both;
+}
+.cover-bottom-bar {
+  animation: fadeFromBottom 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+}
+
+[data-reveal] {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-duration: 0.9s;
+}
+[data-reveal="up"]    { transform: translateY(50px); }
+[data-reveal="left"]  { transform: translateX(-64px); }
+[data-reveal="right"] { transform: translateX(64px); }
+[data-reveal="scale"] { transform: scale(0.93); }
+[data-reveal="fade"]  { }
+
+[data-reveal].in-view {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal], .cover-hero-text, .cover-top, .cover-bottom-bar {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── CLOSING ─────────────────────────────── */
+.closing {
+  height:760px; background:#111;
+  display:flex; flex-direction:column; justify-content:space-between; padding:52px 64px;
+}
+.closing-big { font-size:220px; font-weight:900; color:#fff; text-transform:uppercase; letter-spacing:-8px; line-height:.88; }
+.closing-big span { display:block; color:rgba(255,255,255,.15); }
+.closing-bottom { display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid rgba(255,255,255,.1); padding-top:28px; }
+.closing-name { font-size:14px; font-weight:700; color:#fff; letter-spacing:1px; text-transform:uppercase; }
+.closing-year { font-size:12px; font-weight:300; color:rgba(255,255,255,.3); margin-top:4px; letter-spacing:2px; }
+.closing-contacts { text-align:right; display:flex; flex-direction:column; gap:6px; }
+.closing-contact { font-size:13px; font-weight:300; color:rgba(255,255,255,.5); }
+
+/* ── MOBILE RESPONSIVE ───────────────────── */
+@media (max-width: 700px) {
+
+  body { gap: 3px; }
+  .slide { width: 100%; }
+
+  .cover { height: auto; min-height: 100svh; padding: 32px 24px 0; }
+  .cover-hero { bottom: 90px; }
+  .cover-hero-text { font-size: 21vw; letter-spacing: -2vw; }
+  .cover-bottom-bar { padding: 0 24px; height: 60px; }
+  .cover-roles { flex-wrap: wrap; gap: 2px; }
+  .cover-role-sep { margin: 0 6px; }
+  .cover-contact { gap: 14px; }
+
+  .about { height: auto; padding: 40px 24px; }
+  .about-body { flex-direction: column; gap: 28px; align-items: flex-start; }
+  .about-big-word { font-size: 20vw; letter-spacing: -2vw; }
+  .about-right { max-width: 100%; padding-bottom: 0; }
+  .about-arrow { width: 56px; height: 56px; margin-bottom: 12px; }
+  .about-text { font-size: 15px; }
+  .about-name-line { margin-top: 20px; }
+
+  .about-me { height: auto; padding: 40px 24px; }
+  .me-big { font-size: 20vw; letter-spacing: -2vw; }
+  .me-grid { grid-template-columns: 1fr 1fr; margin-top: 20px; }
+  .me-card { padding: 18px 14px; }
+  .me-card-value { font-size: 13px; }
+
+  .experience { height: auto; padding: 40px 24px; }
+  .exp-big { flex-direction: column; gap: 20px; align-items: flex-start; }
+  .exp-big-word { font-size: 20vw; letter-spacing: -2vw; }
+  .exp-bottom { gap: 20px; flex-wrap: wrap; padding-top: 20px; }
+  .exp-stat-num { font-size: 28px; }
+
+  .skills { height: auto; padding: 40px 24px; }
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .skill-card { padding: 24px 16px; }
+  .skill-title { font-size: 18px; padding-top: 16px; }
+  .skill-sub { font-size: 12px; }
+
+  .software { height: auto; padding: 40px 24px; }
+  .software-grid { grid-template-columns: repeat(3, 1fr); margin-top: 20px; }
+  .sw-card { padding: 20px 8px; gap: 8px; }
+  .sw-icon { font-size: 22px; }
+  .sw-name { font-size: 11px; }
+
+  .edu { flex-direction: column; height: auto; }
+  .edu-left  { padding: 40px 24px; }
+  .edu-right { padding: 40px 24px; }
+  .edu-big      { font-size: 14vw; letter-spacing: -1vw; }
+  .edu-big-dark { font-size: 14vw; letter-spacing: -1vw; }
+
+  .section-intro { height: auto; min-height: 240px; padding: 40px 24px; }
+  .section-big { font-size: 15vw !important; letter-spacing: -2vw !important; }
+  .wd-case-title { font-size: 11vw !important; letter-spacing: -2vw !important; }
+
+  .img-full { width: 100%; }
+  .img-row  { flex-direction: column; height: auto !important; }
+  .img-row .img-col { height: 260px; flex: none; }
+  .art-pair { flex-direction: column; }
+  .art-pair .art-small,
+  .art-pair .art-large { width: 100%; height: 240px; }
+  .two-col { flex-direction: column; }
+  .two-col .col { height: 240px; }
+  .three-col { flex-direction: column; height: auto; }
+  .three-col .col-img { height: 240px; }
+  .three-col .col-img img { height: 100%; }
+  .img-brief { flex-direction: column; }
+  .img-brief .ib-img { height: 280px; overflow: hidden; }
+  .img-brief .ib-img img { width: 100%; height: 100%; object-fit: cover; }
+  .img-brief .ib-text { width: 100%; padding: 28px 24px; order: 2; }
+  .img-text { flex-direction: column; height: auto; }
+  .img-text .it-img { height: 260px; }
+  .img-text .it-text { width: 100%; padding: 28px 24px; }
+  .it-title { font-size: 28px; }
+  .caption-bar { padding: 16px 24px; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .caption-tags { justify-content: flex-start; }
+
+  .auto-grid { flex-direction: column !important; height: auto !important; }
+  .auto-grid > div:first-child { height: 300px; flex: none !important; width: 100% !important; }
+  .auto-grid > div:last-child  { flex: none !important; width: 100% !important; height: 360px; }
+
+  .wd-case-slide {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+    padding: 40px 24px !important;
+    gap: 40px !important;
+  }
+  .wd-phone {
+    justify-content: center;
+    animation: none !important;
+  }
+
+  .closing { height: auto; min-height: 100svh; padding: 40px 24px; }
+  .closing-big { font-size: 20vw; letter-spacing: -2vw; }
+  .closing-bottom { flex-direction: column; gap: 14px; align-items: flex-start; }
+  .closing-contacts { text-align: left; }
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     COVER
+════════════════════════════════════════ -->
+<div class="slide cover">
+  <div class="cover-top">
+    <div>
+      <svg class="globe" viewBox="0 0 44 44" fill="none">
+        <circle cx="22" cy="22" r="20" stroke="#111" stroke-width="1.5"/>
+        <ellipse cx="22" cy="22" rx="10" ry="20" stroke="#111" stroke-width="1.5"/>
+        <line x1="2" y1="22" x2="42" y2="22" stroke="#111" stroke-width="1.5"/>
+        <path d="M6 14 Q22 18 38 14" stroke="#111" stroke-width="1.5" fill="none"/>
+        <path d="M6 30 Q22 26 38 30" stroke="#111" stroke-width="1.5" fill="none"/>
+      </svg>
+      <div class="cover-date">10 June, 2026</div>
+      <div class="cover-pres-label">Creative Portfolio</div>
+      <div class="cover-pres-name">Presented By: Abeer Abdallah Jama</div>
+    </div>
+  </div>
+  <div class="cover-hero">
+    <div class="cover-hero-text">Portfolio</div>
+  </div>
+  <div class="cover-bottom-bar">
+    <div class="cover-roles">
+      <span class="cover-role-item">Graphic Designer</span>
+      <span class="cover-role-sep">/</span>
+      <span class="cover-role-item">Web Designer</span>
+      <span class="cover-role-sep">/</span>
+      <span class="cover-role-item">AI-Powered Creative</span>
+    </div>
+    <div class="cover-contact">
+      <span class="cover-contact-item">abeerabdallah091@gmail.com</span>
+      <span class="cover-contact-item">Somaliland</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     ABOUT — page 1
+════════════════════════════════════════ -->
+<div class="slide about-me">
+  <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#555;">Creative Portfolio · 2026</div>
+      <div class="me-big">About.</div>
+    </div>
+    <div style="max-width:480px;padding-top:12px;">
+      <div style="font-size:16px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.85;">
+        Graphic and web designer specialising in brand identity, digital marketing assets,
+        and client-facing websites. I bring strong visual craft combined with AI-integrated
+        workflows — using Midjourney, Adobe Firefly, and generative tooling to deliver
+        faster without compromising quality.<br><br>
+        Across 2+ years of freelance practice, I have taken brands from zero to fully
+        realised — logo systems, social content, motion graphics, and production-ready
+        websites built mobile-first and optimised for real-world engagement.
+      </div>
+    </div>
+  </div>
+  <div class="me-grid">
+    <div class="me-card">
+      <div class="me-card-label">Based In</div>
+      <div class="me-card-value">Kuwait</div>
+      <div class="me-card-sub">Remote-ready · Available worldwide</div>
+    </div>
+    <div class="me-card">
+      <div class="me-card-label">Experience</div>
+      <div class="me-card-value">2+ Years</div>
+      <div class="me-card-sub">Freelance · Self-directed projects</div>
+    </div>
+    <div class="me-card">
+      <div class="me-card-label">Industries</div>
+      <div class="me-card-value">F&amp;B · Automotive · Luxury</div>
+      <div class="me-card-sub">Tech · Lifestyle · FMCG · Beauty</div>
+    </div>
+    <div class="me-card">
+      <div class="me-card-label">Availability</div>
+      <div class="me-card-value">Open to Work</div>
+      <div class="me-card-sub">Full-time · Freelance · Contract</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     ABOUT — page 2 · ME
+════════════════════════════════════════ -->
+<div class="slide about-me">
+  <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#555;">Portfolio · 2026</div>
+      <div class="me-big">Me.</div>
+    </div>
+    <div style="max-width:480px;padding-top:12px;">
+      <div style="font-size:16px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.85;">
+        I create visual systems that make brands recognisable, websites that convert,
+        and marketing assets that stop the scroll. My advantage is the intersection of
+        traditional design craft and AI fluency — I move faster and ideate wider
+        than a conventional pipeline, without losing the intentionality that makes
+        design actually work.
+      </div>
+    </div>
+  </div>
+  <div class="me-grid">
+    <div class="me-card">
+      <div class="me-card-label">Specialisation</div>
+      <div class="me-card-value">Brand Identity &amp; Web Design</div>
+      <div class="me-card-sub">Logo · UI/UX · Social · Print · Motion</div>
+    </div>
+    <div class="me-card">
+      <div class="me-card-label">Tools &amp; Stack</div>
+      <div class="me-card-value">Figma · Adobe Suite · Canva Pro</div>
+      <div class="me-card-sub">Midjourney · Firefly · ChatGPT · HTML/CSS</div>
+    </div>
+    <div class="me-card">
+      <div class="me-card-label">Work Style</div>
+      <div class="me-card-value">Brief → Concept → Deliver</div>
+      <div class="me-card-sub">Full project lifecycle · Remote-ready · Fast turnaround</div>
+    </div>
+    <div class="me-card">
+      <div class="me-card-label">Contact</div>
+      <div class="me-card-value" style="font-size:12px;">abeerabdallah091@gmail.com</div>
+      <div class="me-card-sub">Available for freelance &amp; full-time</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     EXPERIENCE
+════════════════════════════════════════ -->
+<div class="slide experience">
+  <div class="exp-header">
+    <span class="exp-header-label">Work Experience</span>
+    <span class="exp-header-label">2023 — Present</span>
+  </div>
+  <div class="exp-big">
+    <div class="exp-big-word">Exp</div>
+    <div class="exp-content">
+      <div class="exp-company">Junior Graphic Designer</div>
+      <div style="font-size:13px;font-weight:400;color:rgba(255,255,255,.4);letter-spacing:.5px;margin-bottom:4px;">Freelance &amp; Self-Directed Projects · Kuwait</div>
+      <div class="exp-period">2023 – Present</div>
+      <ul class="exp-bullets">
+        <li>Designed high-quality social media content — static posts, stories, carousels, and short-form video creatives — for Instagram, TikTok, and other digital platforms.</li>
+        <li>Created advertising concepts and campaign visuals inspired by leading brands such as Jahez, Talabat, and Keeta, demonstrating strong understanding of brand guidelines and marketing objectives.</li>
+        <li>Produced digital and print-ready creative assets across multiple industries, including product visualisation, automotive advertising, lifestyle branding, and promotional marketing materials.</li>
+        <li>Developed luxury product presentation concepts and visual compositions for fragrance brands including Dior Sauvage, Tom Ford, and Vertus — applying advanced photo manipulation and visual storytelling techniques.</li>
+        <li>Generated creative campaign concepts and promotional designs for globally recognised brands such as Nike, BMW, Porsche, and Kia, showcasing strong conceptual thinking and brand-awareness skills.</li>
+        <li>Designed and delivered three fully customised business websites across different industries — managing the complete process from wireframing and UI design through to final implementation, ensuring responsive design, branding consistency, and conversion-focused user experiences.</li>
+        <li>Managed the complete design process from initial concept development and research through final production and delivery, ensuring high-quality outcomes and adherence to project timelines.</li>
+        <li>Maintained consistent visual identity standards across multi-format campaigns, strengthening brand recognition and engagement across digital channels.</li>
+        <li>Utilised Adobe Photoshop, Illustrator, and AI-assisted creative tools to streamline workflows, enhance productivity, and deliver high-quality creative solutions.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="exp-bottom">
+    <div class="exp-stat">
+      <div class="exp-stat-num">2+</div>
+      <div class="exp-stat-label">Years Experience</div>
+    </div>
+    <div class="exp-stat">
+      <div class="exp-stat-num">50+</div>
+      <div class="exp-stat-label">Projects Completed</div>
+    </div>
+    <div class="exp-stat">
+      <div class="exp-stat-num">3</div>
+      <div class="exp-stat-label">Specializations</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     SKILLS & EXPERTISE
+════════════════════════════════════════ -->
+<div class="slide skills">
+  <div class="slide-header">
+    <span class="slide-label">Skills &amp; Expertise</span>
+    <span class="slide-year">2026</span>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-num">01</div>
+      <div>
+        <div class="skill-title">Concept Development</div>
+        <div class="skill-sub">From brief to final execution — full creative lifecycle managed independently.</div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-num">02</div>
+      <div>
+        <div class="skill-title">Color Theory &amp; Typography</div>
+        <div class="skill-sub">Bilingual layouts in Arabic and English with strong typographic hierarchy.</div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-num">03</div>
+      <div>
+        <div class="skill-title">Brand Identity</div>
+        <div class="skill-sub">Visual systems, guidelines, and multi-format consistency across campaigns.</div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-num">04</div>
+      <div>
+        <div class="skill-title">Social Media Design</div>
+        <div class="skill-sub">Posts, stories, and reels for TikTok, Instagram, and advertising platforms.</div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-num">05</div>
+      <div>
+        <div class="skill-title">Product Visualization</div>
+        <div class="skill-sub">Luxury product and fragrance photography retouching using Photoshop lighting.</div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-num">06</div>
+      <div>
+        <div class="skill-title">Automotive Compositing</div>
+        <div class="skill-sub">Cinematic car scenes merging photography, lighting, and environment seamlessly.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     SOFTWARE PROFICIENCY
+════════════════════════════════════════ -->
+<div class="slide software">
+  <div style="display:flex;justify-content:space-between;">
+    <span class="page-header-label">Software Proficiency</span>
+    <span class="page-header-label">Tools I Use</span>
+  </div>
+  <div class="software-grid">
+    <div class="sw-card">
+      <div class="sw-icon" style="color:#31A8FF;">Ps</div>
+      <div class="sw-name">Photoshop</div>
+      <div class="sw-level">Advanced</div>
+    </div>
+    <div class="sw-card">
+      <div class="sw-icon" style="color:#FF9A00;">Ai</div>
+      <div class="sw-name">Illustrator</div>
+      <div class="sw-level">Advanced</div>
+    </div>
+    <div class="sw-card">
+      <div class="sw-icon" style="color:#FF3366;">Id</div>
+      <div class="sw-name">InDesign</div>
+      <div class="sw-level">Intermediate</div>
+    </div>
+    <div class="sw-card">
+      <div class="sw-icon" style="color:#7C68EE;font-size:22px;">Canva</div>
+      <div class="sw-name">Canva</div>
+      <div class="sw-level">Advanced</div>
+    </div>
+    <div class="sw-card">
+      <div class="sw-icon" style="color:#9999FF;">Pr</div>
+      <div class="sw-name">Premiere</div>
+      <div class="sw-level">Basic</div>
+    </div>
+    <div class="sw-card" style="background:#efefef;">
+      <div class="sw-icon" style="font-size:20px;color:#111;text-align:center;line-height:1.2;">AI<br>Tools</div>
+      <div class="sw-name">AI Design</div>
+      <div class="sw-level">Proficient</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     SECTION A · AUTOMOTIVE COMPOSITING
+════════════════════════════════════════ -->
+<div class="slide section-intro" style="background:#0f0f0f;">
+  <div class="slide-header">
+    <span class="slide-label">Creative Portfolio</span>
+    <span class="slide-year">2025</span>
+  </div>
+  <div>
+    <div class="section-num">01 — Automotive Compositing</div>
+    <div class="section-big" style="color:#fff;">My Art<br>Work.</div>
+  </div>
+</div>
+
+<div class="slide auto-grid" style="display:flex; gap:4px; background:#0a0a0a; height:740px;">
+  <div style="flex:1.65; overflow:hidden; position:relative;">
+    <img src="images/porsche.jpg" alt="Porsche 718 Boxster" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <div style="position:absolute; bottom:36px; left:36px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.55);text-shadow:0 1px 8px rgba(0,0,0,.9);margin-bottom:10px;">Featured Work</div>
+      <div style="font-size:28px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1.1;text-shadow:0 2px 16px rgba(0,0,0,.9);">Porsche 718<br>Boxster</div>
+      <div style="width:36px;height:2px;background:#2B2CE8;margin-top:14px;"></div>
+    </div>
+  </div>
+  <div style="flex:1; display:flex; flex-direction:column; gap:4px;">
+    <div style="flex:1; overflow:hidden;">
+      <img src="images/redcar.jpg" alt="Cinematic red sports car" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+    <div style="display:flex; gap:4px; flex-shrink:0;">
+      <div style="flex:1;background:#141414;padding:24px 12px;display:flex;flex-direction:column;align-items:center;gap:7px;border-top:2.5px solid #31A8FF;">
+        <span style="font-size:28px;font-weight:900;color:#31A8FF;letter-spacing:-1px;">Ps</span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);">Photoshop</span>
+      </div>
+      <div style="flex:1;background:#141414;padding:24px 12px;display:flex;flex-direction:column;align-items:center;gap:7px;border-top:2.5px solid #FF9A00;">
+        <span style="font-size:28px;font-weight:900;color:#FF9A00;letter-spacing:-1px;">Ai</span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);">Illustrator</span>
+      </div>
+      <div style="flex:1;background:#141414;padding:24px 12px;display:flex;flex-direction:column;align-items:center;gap:7px;border-top:2.5px solid #1DB588;">
+        <span style="font-size:24px;font-weight:900;color:#1DB588;letter-spacing:-1px;">FP</span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);">Freepik</span>
+      </div>
+    </div>
+    <div style="flex:1; overflow:hidden;">
+      <img src="images/porsche-social.jpg" alt="Porsche 911 GT3" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+  </div>
+</div>
+<div class="slide caption-bar" style="background:#111;">
+  <div class="caption-text" style="color:rgba(255,255,255,.7);">
+    Cinematic automotive compositions created using advanced Photoshop compositing techniques.
+    Each scene merges photography, lighting, and environment into aspirational visuals that
+    emphasise performance, elegance, and motion.
+  </div>
+  <div class="caption-tags">
+    <span class="caption-tag">Photoshop</span>
+    <span class="caption-tag">Compositing</span>
+    <span class="caption-tag">Porsche · Sports Car</span>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     SECTION B · SOCIAL MEDIA CAMPAIGNS
+════════════════════════════════════════ -->
+<div class="slide section-intro" style="background:#111; height:560px;">
+  <div class="slide-header">
+    <span class="slide-label">Creative Portfolio</span>
+    <span class="slide-year">2025</span>
+  </div>
+  <div>
+    <div class="section-num">02 — Social Media Campaigns</div>
+    <div class="section-big" style="color:#fff; font-size:132px; letter-spacing:-5px;">Social<br>Media<br>Designs.</div>
+  </div>
+</div>
+
+<div class="slide img-full">
+  <img src="images/bmw.jpg" alt="BMW Drive the Future — automotive campaign">
+</div>
+<div class="slide caption-bar" style="background:#111;">
+  <div class="caption-text" style="color:rgba(255,255,255,.7);">
+    "Drive the Future" — a multi-vehicle BMW campaign blending three iconic models into one
+    cinematic scene. Advanced sky replacement, colour grading, and light synchronisation across
+    each car create a unified, high-impact composition.
+  </div>
+  <div class="caption-tags">
+    <span class="caption-tag">Photoshop</span>
+    <span class="caption-tag">BMW</span>
+    <span class="caption-tag">Colour Grading</span>
+  </div>
+</div>
+
+<div class="slide img-full">
+  <img src="images/kia.jpg" alt="Kia K5 — where elegance meets performance">
+</div>
+<div class="slide caption-bar" style="background:#0a0a0a;">
+  <div class="caption-text" style="color:rgba(255,255,255,.7);">
+    Kia K5 — "where elegance meets performance." A night-city automotive banner using motion
+    light trails, a dramatic skyline backdrop, and precise vehicle masking to deliver a campaign
+    that is both cinematic and commercially compelling.
+  </div>
+  <div class="caption-tags">
+    <span class="caption-tag">Photoshop</span>
+    <span class="caption-tag">Kia K5</span>
+    <span class="caption-tag">Advertising</span>
+  </div>
+</div>
+
+<div class="slide img-full">
+  <img src="images/jahez.jpg" alt="Jahez — social media advertising campaign">
+</div>
+<div class="slide caption-bar" style="background:#111;">
+  <div class="caption-text" style="color:rgba(255,255,255,.7);">
+    A multi-format advertising campaign for Jahez — three distinct ad formats designed to work
+    together as a series, each with bold Arabic typography, brand-consistent red and white,
+    and strong visual storytelling.
+  </div>
+  <div class="caption-tags">
+    <span class="caption-tag">Photoshop</span>
+    <span class="caption-tag">Arabic Type</span>
+    <span class="caption-tag">Jahez</span>
+  </div>
+</div>
+
+<div class="slide img-row" style="height:760px;">
+  <div class="img-col" style="overflow:hidden;">
+    <img src="images/talabat.jpg" alt="Talabat fast delivery campaign" style="width:100%;height:100%;object-fit:cover;display:block;">
+  </div>
+  <div class="img-col" style="overflow:hidden;">
+    <img src="images/keeta.jpg" alt="Keeta first order discount campaign" style="width:100%;height:100%;object-fit:cover;display:block;">
+  </div>
+</div>
+<div class="slide caption-bar" style="background:#111;">
+  <div class="caption-text" style="color:rgba(255,255,255,.7);">
+    Social media advertising campaigns for Talabat and Keeta — two of Kuwait's leading food
+    delivery platforms. Bold Arabic typography, dynamic compositions, and strict brand colour
+    systems deliver scroll-stopping creative that drives conversion.
+  </div>
+  <div class="caption-tags">
+    <span class="caption-tag">Photoshop</span>
+    <span class="caption-tag">Arabic Type</span>
+    <span class="caption-tag">Talabat · Keeta</span>
+  </div>
+</div>
+
+<div class="slide img-full">
+  <img src="images/italy.jpg" alt="Taly payment app campaign">
+</div>
+<div class="slide caption-bar" style="background:#111;">
+  <div class="caption-text" style="color:rgba(255,255,255,.7);">
+    I wanted this design to feel simple but thoughtful. Using the same character in different
+    moments helps show the idea of choice and comparison. I paid attention to lighting, spacing,
+    and type so everything feels balanced and easy to read, without distracting from the main message.
+  </div>
+  <div class="caption-tags">
+    <span class="caption-tag">Photoshop</span>
+    <span class="caption-tag">Arabic Type</span>
+    <span class="caption-tag">Taly · Brand Design</span>
+  </div>
+</div>
+
+<div class="slide img-brief" style="background:#0f0f0f;">
+  <div class="ib-text" style="background:#0f0f0f;">
+    <div class="it-cat" style="color:rgba(255,255,255,.3);">Sport &amp; Lifestyle</div>
+    <div class="it-title" style="color:#fff;">Nike<br>Vomero 18.</div>
+    <div class="it-bar"></div>
+    <div class="it-desc" style="color:rgba(255,255,255,.65);">
+      This design is all about movement and impact. A low-angle perspective makes the motion feel
+      powerful and puts the focus on the shoe in action. The bold type and open space keep the
+      message clear while letting the energy of the image do most of the talking.
+    </div>
+    <div class="it-tags">
+      <span class="caption-tag">Photoshop</span>
+      <span class="caption-tag">Nike</span>
+      <span class="caption-tag">Sport Design</span>
+    </div>
+  </div>
+  <div class="ib-img">
+    <img src="images/nike.jpg" alt="Nike Just Do It — Vomero 18">
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     SECTION C · BRAND IDENTITY
+════════════════════════════════════════ -->
+<div class="slide section-intro" style="background:#1a3a1a;">
+  <div class="slide-header">
+    <span class="slide-label">Creative Portfolio</span>
+    <span class="slide-year">2025</span>
+  </div>
+  <div>
+    <div class="section-num">03 — Brand Identity</div>
+    <div class="section-big" style="color:#fff;">Brand<br>Identity.</div>
+  </div>
+</div>
+
+<div class="slide img-full">
+  <img src="images/greenbites.jpg" alt="Green Bites healthy food brand identity">
+</div>
+<div class="slide caption-bar" style="background:#1a3a1a;">
+  <div class="caption-text" style="color:rgba(255,255,255,.75);">
+    Green Bites — a complete social media identity system for a healthy food brand. A consistent
+    visual language built across posts, stories, and app mockups, combining earthy greens with
+    expressive Arabic typography and bold food photography.
+  </div>
+  <div class="caption-tags">
+    <span class="caption-tag">Photoshop</span>
+    <span class="caption-tag">Illustrator</span>
+    <span class="caption-tag">Brand Identity</span>
+    <span class="caption-tag">Arabic Type</span>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     SECTION D · PRODUCT VISUALIZATION
+════════════════════════════════════════ -->
+<div class="slide section-intro" style="background:#0a0808;">
+  <div class="slide-header">
+    <span class="slide-label">Creative Portfolio</span>
+    <span class="slide-year">2025</span>
+  </div>
+  <div>
+    <div class="section-num">04 — Product Visualization</div>
+    <div class="section-big" style="color:#fff;">Scent &amp;<br>Light.</div>
+  </div>
+</div>
+
+<div class="slide img-row" style="height:720px;">
+  <div class="img-col" style="overflow:hidden;">
+    <img src="images/vertus.jpg" alt="Vertus fragrance — studio lighting" style="width:100%;height:100%;object-fit:cover;display:block;">
+  </div>
+  <div class="img-col" style="overflow:hidden;">
+    <img src="images/dior.jpg" alt="Dior Sauvage — blue studio lighting" style="width:100%;height:100%;object-fit:cover;display:block;">
+  </div>
+  <div class="img-col" style="overflow:hidden;">
+    <img src="images/tomford.jpg" alt="Tom Ford Lost Cherry — red studio lighting" style="width:100%;height:100%;object-fit:cover;display:block;">
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     SECTION E · WEBSITE DESIGN
+════════════════════════════════════════ -->
+<style>
+@keyframes wd-float {
+  0%,100% { transform: translateY(0px); }
+  50%      { transform: translateY(-10px); }
+}
+@keyframes wd-bullet-in {
+  from { opacity:0; transform:translateX(-10px); }
+  to   { opacity:1; transform:translateX(0); }
+}
+.wd-phone {
+  animation: wd-float 5s cubic-bezier(0.45,0,0.55,1) infinite;
+}
+.wd-bullet { opacity:0; }
+.wd-bullet.wd-vis { animation: wd-bullet-in 360ms cubic-bezier(0.23,1,0.32,1) forwards; }
+.wd-bullet.wd-vis:nth-child(1) { animation-delay:0ms; }
+.wd-bullet.wd-vis:nth-child(2) { animation-delay:55ms; }
+.wd-bullet.wd-vis:nth-child(3) { animation-delay:110ms; }
+.wd-bullet.wd-vis:nth-child(4) { animation-delay:165ms; }
+.wd-bullet.wd-vis:nth-child(5) { animation-delay:220ms; }
+.wd-bullet.wd-vis:nth-child(6) { animation-delay:275ms; }
+.wd-cta {
+  display:inline-flex; align-items:center; gap:8px;
+  background:#2B2CE8; color:#fff;
+  font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase;
+  padding:12px 24px; border-radius:3px; text-decoration:none; margin-top:20px;
+  transition: transform 160ms cubic-bezier(0.23,1,0.32,1),
+              box-shadow 160ms cubic-bezier(0.23,1,0.32,1);
+}
+@media (hover:hover) and (pointer:fine) {
+  .wd-cta:hover { transform:translateY(-2px); box-shadow:0 8px 32px rgba(43,44,232,.45); }
+}
+.wd-cta:active { transform:scale(0.97); transition-duration:100ms; }
+@media (prefers-reduced-motion:reduce) {
+  .wd-phone { animation:none !important; }
+  .wd-bullet { opacity:1 !important; animation:none !important; }
+}
+
+/* ── BEYDAN CINEMATIC PHONE SCENES ─────── */
+.cin-scene {
+  position:absolute; inset:0; overflow:hidden;
+  opacity:0;
+  transition: opacity 700ms cubic-bezier(0.23,1,0.32,1);
+  pointer-events:none;
+}
+.cin-scene.cin-active { opacity:1; pointer-events:auto; }
+
+/* Ken Burns base — applied to scene images */
+.cin-img {
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  transform-origin:center center;
+  will-change:transform;
+}
+@keyframes cin-kb-zoom-in {
+  from { transform:scale(1) translate(0,0); }
+  to   { transform:scale(1.14) translate(-2%,-1.5%); }
+}
+@keyframes cin-kb-pan-up {
+  from { transform:scale(1.08) translate(0,3%); }
+  to   { transform:scale(1.12) translate(0,-3%); }
+}
+@keyframes cin-kb-pan-right {
+  from { transform:scale(1.1) translate(4%,0); }
+  to   { transform:scale(1.06) translate(-2%,0); }
+}
+@keyframes cin-kb-gentle {
+  from { transform:scale(1) translate(0,0); }
+  to   { transform:scale(1.08) translate(1%,-1%); }
+}
+
+/* text reveal animations */
+@keyframes cin-rise {
+  from { opacity:0; transform:translateY(10px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes cin-fade {
+  from { opacity:0; }
+  to   { opacity:1; }
+}
+@keyframes cin-tape-scroll {
+  from { transform:translateX(0); }
+  to   { transform:translateX(-50%); }
+}
+
+/* scrubber progress bar */
+.cin-progress-bar {
+  position:absolute; bottom:0; left:0; height:2px;
+  background:#EBB012; width:0%;
+  transition:none;
+  z-index:100;
+}
+
+/* before scene */
+.cin-before-nav { background:#e8e8e8; height:28px; display:flex; align-items:center; padding:0 10px; gap:8px; }
+.cin-before-logo { font-family:Times New Roman,serif; font-size:9px; color:#333; font-weight:700; }
+.cin-before-links { display:flex; gap:6px; margin-left:auto; }
+.cin-before-link { font-size:6.5px; color:#666; font-family:Arial,sans-serif; }
+.cin-before-hero { background:#f0f4f8; flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; padding:16px; }
+.cin-before-badge { font-size:6.5px; background:#fff; border:1px solid #ddd; color:#999; padding:3px 8px; border-radius:2px; font-family:Arial,sans-serif; letter-spacing:.5px; }
+
+@media (prefers-reduced-motion:reduce) {
+  .cin-img { animation:none !important; transform:none !important; }
+  .cin-scene.cin-active { opacity:1; transition:none; }
+}
+
+/* pulsing live indicator */
+@keyframes bd-pulse {
+  0%,100% { opacity:1; transform:scale(1); }
+  50%     { opacity:.4; transform:scale(0.7); }
+}
+.bd-live-dot { animation: bd-pulse 1.8s ease-in-out infinite; }
+
+/* beydan bullet stagger */
+.bd-bullet { opacity:0; }
+.bd-bullet.bd-vis { animation: wd-bullet-in 360ms cubic-bezier(0.23,1,0.32,1) forwards; }
+.bd-bullet.bd-vis:nth-child(1) { animation-delay:0ms; }
+.bd-bullet.bd-vis:nth-child(2) { animation-delay:55ms; }
+.bd-bullet.bd-vis:nth-child(3) { animation-delay:110ms; }
+.bd-bullet.bd-vis:nth-child(4) { animation-delay:165ms; }
+.bd-bullet.bd-vis:nth-child(5) { animation-delay:220ms; }
+</style>
+
+<div class="slide section-intro" style="background:#0d1a0f; position:relative; overflow:hidden;">
+  <div style="position:absolute;top:-80px;right:-80px;width:420px;height:420px;background:radial-gradient(circle,rgba(43,200,90,.1) 0%,transparent 65%);border-radius:50%;pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-100px;left:25%;width:300px;height:300px;background:radial-gradient(circle,rgba(43,44,232,.07) 0%,transparent 65%);border-radius:50%;pointer-events:none;"></div>
+  <div class="slide-header">
+    <span class="slide-label">Creative Portfolio</span>
+    <span class="slide-year">2026</span>
+  </div>
+  <div>
+    <div class="section-num">05 — Website Design</div>
+    <div class="section-big" style="color:#fff;">Web<br>Design.</div>
+  </div>
+</div>
+
+<!-- Asli Mills case study -->
+<div class="slide wd-case-slide" style="background:linear-gradient(160deg,#0e0e0e 0%,#111 55%,#0c130e 100%); border-top:1px solid rgba(43,44,232,.15); padding:52px 64px; display:grid; grid-template-columns:1fr 252px; gap:72px; align-items:center; height:740px;">
+
+  <div style="display:flex; flex-direction:column; gap:28px;">
+
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+        <span style="width:18px;height:2px;background:#2B2CE8;display:inline-block;flex-shrink:0;"></span>
+        <span style="font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.3);">Case Study · 2026</span>
+      </div>
+      <div class="wd-case-title" style="font-size:60px;font-weight:900;color:#fff;letter-spacing:-3px;line-height:.95;">Asli Mills</div>
+      <div style="font-size:12px;font-weight:300;color:rgba(255,255,255,.35);margin-top:10px;letter-spacing:2px;text-transform:uppercase;">100% Natural &amp; Organic — Somaliland</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;">
+        <a href="file:///C:/Users/amala/OneDrive/Desktop/asli-mills-site/index.html" target="_blank" rel="noopener" class="wd-cta" style="display:inline-flex;align-items:center;gap:8px;background:#2B2CE8;color:#fff;font-size:10px;font-weight:700;padding:10px 22px;border-radius:3px;text-decoration:none;letter-spacing:2px;text-transform:uppercase;">View Live Site ↗</a>
+        <a href="https://horumar-solution.github.io/asli-mills/asil-mills-presentation.html" target="_blank" rel="noopener" class="wd-cta" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,.7);font-size:10px;font-weight:700;padding:10px 22px;border-radius:3px;text-decoration:none;letter-spacing:2px;text-transform:uppercase;border:1px solid rgba(255,255,255,.15);">View Presentation ↗</a>
+      </div>
+    </div>
+
+    <div style="width:32px;height:1px;background:rgba(255,255,255,.12);"></div>
+
+    <div>
+      <div style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:12px;">About the Project</div>
+      <div style="font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.85;">
+        A full website built for Asli Mills — a natural skincare brand in Somaliland.
+        Designed to look premium, load fast on every phone, and let customers order
+        with a single WhatsApp tap.
+      </div>
+    </div>
+
+    <div>
+      <div style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:14px;">What Was Delivered</div>
+      <div class="wd-bullets" style="display:flex;flex-direction:column;gap:10px;border-left:2px solid rgba(43,44,232,.25);padding-left:16px;">
+        <div class="wd-bullet" style="display:flex;gap:12px;align-items:flex-start;">
+          <span style="color:#2B2CE8;font-weight:900;font-size:14px;flex-shrink:0;line-height:1.65;">→</span>
+          <span style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65;">WhatsApp order button on every product — one tap to order</span>
+        </div>
+        <div class="wd-bullet" style="display:flex;gap:12px;align-items:flex-start;">
+          <span style="color:#2B2CE8;font-weight:900;font-size:14px;flex-shrink:0;line-height:1.65;">→</span>
+          <span style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65;">Mobile-first — perfect on every phone, tablet, and screen</span>
+        </div>
+        <div class="wd-bullet" style="display:flex;gap:12px;align-items:flex-start;">
+          <span style="color:#2B2CE8;font-weight:900;font-size:14px;flex-shrink:0;line-height:1.65;">→</span>
+          <span style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65;">Rich link previews on WhatsApp, Instagram &amp; Facebook</span>
+        </div>
+        <div class="wd-bullet" style="display:flex;gap:12px;align-items:flex-start;">
+          <span style="color:#2B2CE8;font-weight:900;font-size:14px;flex-shrink:0;line-height:1.65;">→</span>
+          <span style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65;">Scrolling reviews &amp; trust badges to convert new visitors</span>
+        </div>
+        <div class="wd-bullet" style="display:flex;gap:12px;align-items:flex-start;">
+          <span style="color:#2B2CE8;font-weight:900;font-size:14px;flex-shrink:0;line-height:1.65;">→</span>
+          <span style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65;">Smooth animations &amp; scroll reveals throughout</span>
+        </div>
+        <div class="wd-bullet" style="display:flex;gap:12px;align-items:flex-start;">
+          <span style="color:#2B2CE8;font-weight:900;font-size:14px;flex-shrink:0;line-height:1.65;">→</span>
+          <span style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65;">Full brand identity — fonts, colors &amp; design system</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Asli Mills phone -->
+  <div class="wd-phone" style="display:flex;align-items:center;justify-content:center;height:100%;">
+    <div style="width:252px;background:#1c1c1e;border-radius:40px;border:6px solid #2c2c2e;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,.75), 0 0 0 1px rgba(255,255,255,.04), 0 8px 60px rgba(43,44,232,.18);">
+      <div style="background:#1c1c1e;height:24px;display:flex;align-items:center;justify-content:center;">
+        <div style="width:56px;height:5px;border-radius:3px;background:rgba(255,255,255,.1);"></div>
+      </div>
+      <div style="background:#2c2c2e;padding:5px 10px;display:flex;align-items:center;gap:6px;">
+        <div style="display:flex;gap:3px;flex-shrink:0;">
+          <span style="width:5px;height:5px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
+          <span style="width:5px;height:5px;border-radius:50%;background:#febc2e;display:inline-block;"></span>
+          <span style="width:5px;height:5px;border-radius:50%;background:#28c840;display:inline-block;"></span>
+        </div>
+        <div style="flex:1;background:#3a3a3c;border-radius:4px;padding:3px 8px;display:flex;align-items:center;gap:4px;">
+          <span style="font-size:7px;color:#8e8e93;">🔒</span>
+          <span style="font-size:8px;font-weight:600;color:rgba(255,255,255,.55);font-family:'Inter',sans-serif;letter-spacing:.2px;">tinyurl.com/asli-mills</span>
+        </div>
+      </div>
+      <!-- AM CINEMATIC SCREEN -->
+      <div id="am-cin-phone" style="width:240px;height:480px;overflow:hidden;position:relative;background:#060e08;">
+        <div class="cin-progress-bar" id="am-cin-progress"></div>
+
+        <!-- ── S1: TITLE CARD ── -->
+        <div class="cin-scene" id="am-s1" style="background:#050d07;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+          <div style="font-size:6px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(200,164,74,.5);font-family:'Inter',sans-serif;animation:cin-fade 600ms 200ms both;">Website Design</div>
+          <img src="asli-mills-images/download.png" alt="Asli Mills" style="width:80px;height:80px;object-fit:contain;animation:cin-fade 700ms 300ms both;filter:brightness(1.1);">
+          <div style="font-size:20px;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:.9;font-family:'Inter',sans-serif;text-align:center;animation:cin-rise 700ms 450ms both;">Asli<br><span style="color:#C8A44A;">Mills</span></div>
+          <div style="width:20px;height:1px;background:rgba(200,164,74,.4);animation:cin-fade 500ms 700ms both;"></div>
+          <div style="font-size:6.5px;color:rgba(255,255,255,.25);font-family:'Inter',sans-serif;letter-spacing:3px;text-transform:uppercase;animation:cin-fade 500ms 800ms both;">Since 1998</div>
+        </div>
+
+        <!-- ── S2: HERO ── -->
+        <div class="cin-scene" id="am-s2" style="background:#060e08;">
+          <img src="asli-mills-images/hero-eucalyptus.jpeg" alt="" class="cin-img" style="animation:cin-kb-zoom-in 9s cubic-bezier(0.23,1,0.32,1) both;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,#04080505 0%,rgba(4,12,6,.88) 0%,rgba(4,12,6,.88) 0%);background:linear-gradient(to top,#040c06 0%,rgba(4,12,6,.75) 38%,rgba(4,12,6,.35) 70%,transparent 100%);"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(4,12,6,.55) 0%,transparent 60%);"></div>
+          <!-- top bar -->
+          <div style="position:absolute;top:14px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.07);backdrop-filter:blur(14px);border-radius:100px;padding:4px 14px;white-space:nowrap;animation:cin-fade 600ms 350ms both;">
+            <span style="font-size:7.5px;font-weight:700;color:rgba(255,255,255,.6);font-family:'Inter',sans-serif;letter-spacing:.3px;">Asli Mills</span>
+          </div>
+          <!-- label -->
+          <div style="position:absolute;top:14px;left:14px;animation:cin-fade 500ms 200ms both;">
+            <span style="font-size:5.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(200,164,74,.6);font-family:'Inter',sans-serif;">100% Natural &amp; Organic</span>
+          </div>
+          <!-- main text -->
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 14px 20px;">
+            <div style="font-size:13px;font-weight:400;color:rgba(255,255,255,.5);font-family:'Inter',sans-serif;letter-spacing:-.2px;margin-bottom:3px;animation:cin-rise 500ms 300ms both;">Who We</div>
+            <div style="font-size:42px;font-weight:900;color:#fff;line-height:.82;letter-spacing:-3px;font-family:'Inter',sans-serif;animation:cin-rise 700ms 400ms both;">Are<span style="color:#C8A44A;font-style:italic;">.</span></div>
+            <p style="font-size:7.5px;color:rgba(255,255,255,.42);font-family:'Inter',sans-serif;line-height:1.6;margin-top:10px;margin-bottom:12px;max-width:26ch;animation:cin-rise 600ms 550ms both;">Since 1998, Hargeisa's most trusted source for pure, natural skincare.</p>
+            <!-- stats row -->
+            <div style="display:flex;gap:16px;animation:cin-rise 600ms 700ms both;">
+              <div>
+                <div style="font-size:15px;font-weight:900;color:#fff;font-family:'Inter',sans-serif;line-height:1;">1998</div>
+                <div style="font-size:5.5px;color:rgba(255,255,255,.3);font-family:'Inter',sans-serif;letter-spacing:1.5px;text-transform:uppercase;margin-top:1px;">Est. Hargeisa</div>
+              </div>
+              <div>
+                <div style="font-size:15px;font-weight:900;color:#fff;font-family:'Inter',sans-serif;line-height:1;">8+</div>
+                <div style="font-size:5.5px;color:rgba(255,255,255,.3);font-family:'Inter',sans-serif;letter-spacing:1.5px;text-transform:uppercase;margin-top:1px;">Products</div>
+              </div>
+              <div>
+                <div style="font-size:15px;font-weight:900;color:#C8A44A;font-family:'Inter',sans-serif;line-height:1;">100%</div>
+                <div style="font-size:5.5px;color:rgba(255,255,255,.3);font-family:'Inter',sans-serif;letter-spacing:1.5px;text-transform:uppercase;margin-top:1px;">Natural</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── S3: ABOUT ── -->
+        <div class="cin-scene" id="am-s3" style="background:#f5f3ee;">
+          <img src="asli-mills-images/about-hero.jpeg" alt="" class="cin-img" style="animation:cin-kb-pan-up 7s cubic-bezier(0.23,1,0.32,1) both;object-position:center top;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,#f5f3ee 0%,rgba(245,243,238,.85) 40%,rgba(245,243,238,.3) 75%,transparent 100%);"></div>
+          <!-- content bottom overlay -->
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 14px 18px;">
+            <div style="font-size:6px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#C8A44A;font-family:'Inter',sans-serif;margin-bottom:5px;animation:cin-fade 500ms 200ms both;">About Us</div>
+            <div style="font-size:22px;font-weight:900;color:#1a1a1a;line-height:.88;letter-spacing:-1px;font-family:'Inter',sans-serif;animation:cin-rise 700ms 300ms both;">Who We<br>Are.</div>
+            <p style="font-size:7.5px;color:rgba(0,0,0,.5);font-family:'Inter',sans-serif;line-height:1.6;margin-top:10px;max-width:28ch;animation:cin-rise 600ms 450ms both;">Asli Mills was founded February 1998. A leading producer for reliable natural products — 100% natural, quality-made, environmentally friendly.</p>
+            <!-- tags -->
+            <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:10px;animation:cin-rise 500ms 600ms both;">
+              <span style="background:rgba(13,43,26,.08);border:1px solid rgba(13,43,26,.18);border-radius:100px;padding:3px 8px;font-size:6px;font-weight:700;color:#0D2B1A;font-family:'Inter',sans-serif;letter-spacing:.5px;">100% Natural</span>
+              <span style="background:rgba(13,43,26,.08);border:1px solid rgba(13,43,26,.18);border-radius:100px;padding:3px 8px;font-size:6px;font-weight:700;color:#0D2B1A;font-family:'Inter',sans-serif;letter-spacing:.5px;">Ethically Sourced</span>
+              <span style="background:rgba(13,43,26,.08);border:1px solid rgba(13,43,26,.18);border-radius:100px;padding:3px 8px;font-size:6px;font-weight:700;color:#0D2B1A;font-family:'Inter',sans-serif;letter-spacing:.5px;">Somaliland Made</span>
+            </div>
+          </div>
+          <!-- 25 years badge -->
+          <div style="position:absolute;top:14px;right:14px;width:52px;height:52px;border-radius:50%;background:#0D2B1A;display:flex;flex-direction:column;align-items:center;justify-content:center;animation:cin-fade 600ms 400ms both;">
+            <span style="font-size:14px;font-weight:900;color:#C8A44A;font-family:'Inter',sans-serif;line-height:1;">25+</span>
+            <span style="font-size:5px;font-weight:700;color:rgba(255,255,255,.5);font-family:'Inter',sans-serif;letter-spacing:.5px;text-transform:uppercase;">Years</span>
+          </div>
+        </div>
+
+        <!-- ── S4: PRODUCTS ── -->
+        <div class="cin-scene" id="am-s4" style="background:#0D2B1A;padding:14px 12px;display:flex;flex-direction:column;gap:10px;">
+          <div style="animation:cin-rise 600ms 100ms both;">
+            <div style="font-size:6px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(200,164,74,.5);font-family:'Inter',sans-serif;margin-bottom:4px;">Our Range</div>
+            <div style="font-size:20px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:.9;font-family:'Inter',sans-serif;">The <span style="color:#C8A44A;font-style:italic;">Products.</span></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;flex:1;">
+            <div style="border-radius:14px;overflow:hidden;position:relative;background:#1a3a24;animation:cin-rise 600ms 180ms both;">
+              <img src="asli-mills-images/product%201.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+              <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(4,12,6,.93) 35%,transparent 65%);"></div>
+              <div style="position:absolute;top:5px;left:5px;background:#C8A44A;border-radius:100px;padding:2px 5px;"><span style="font-size:5px;font-weight:700;color:#111;font-family:'Inter',sans-serif;letter-spacing:.5px;">BESTSELLER</span></div>
+              <div style="position:absolute;bottom:6px;left:7px;right:5px;">
+                <div style="font-size:7.5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;line-height:1.2;">Frankincense Oil</div>
+                <div style="font-size:6px;color:#C8A44A;font-family:'Inter',sans-serif;margin-top:1px;">Pure · Organic</div>
+              </div>
+            </div>
+            <div style="border-radius:14px;overflow:hidden;position:relative;background:#1a3a24;animation:cin-rise 600ms 260ms both;">
+              <img src="asli-mills-images/product%202.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+              <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(4,12,6,.93) 35%,transparent 65%);"></div>
+              <div style="position:absolute;top:5px;left:5px;background:rgba(255,255,255,.14);backdrop-filter:blur(4px);border-radius:100px;padding:2px 5px;"><span style="font-size:5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;letter-spacing:.5px;">NATURAL</span></div>
+              <div style="position:absolute;bottom:6px;left:7px;right:5px;">
+                <div style="font-size:7.5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;line-height:1.2;">Qasil Face Pack</div>
+                <div style="font-size:6px;color:#C8A44A;font-family:'Inter',sans-serif;margin-top:1px;">Traditional</div>
+              </div>
+            </div>
+            <div style="border-radius:14px;overflow:hidden;position:relative;background:#1a3a24;animation:cin-rise 600ms 340ms both;">
+              <img src="asli-mills-images/products%203.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+              <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(4,12,6,.93) 35%,transparent 65%);"></div>
+              <div style="position:absolute;top:5px;left:5px;background:rgba(166,100,31,.8);border-radius:100px;padding:2px 5px;"><span style="font-size:5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;letter-spacing:.5px;">HEALING</span></div>
+              <div style="position:absolute;bottom:6px;left:7px;right:5px;">
+                <div style="font-size:7.5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;line-height:1.2;">Myrrh Oil</div>
+                <div style="font-size:6px;color:#C8A44A;font-family:'Inter',sans-serif;margin-top:1px;">Wild-crafted</div>
+              </div>
+            </div>
+            <div style="border-radius:14px;overflow:hidden;position:relative;background:#1a3a24;animation:cin-rise 600ms 420ms both;">
+              <img src="asli-mills-images/product4.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+              <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(4,12,6,.93) 35%,transparent 65%);"></div>
+              <div style="position:absolute;top:5px;left:5px;background:rgba(255,255,255,.14);backdrop-filter:blur(4px);border-radius:100px;padding:2px 5px;"><span style="font-size:5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;letter-spacing:.5px;">TRENDING</span></div>
+              <div style="position:absolute;bottom:6px;left:7px;right:5px;">
+                <div style="font-size:7.5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;line-height:1.2;">Henna Powder</div>
+                <div style="font-size:6px;color:#C8A44A;font-family:'Inter',sans-serif;margin-top:1px;">Somali Blend</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── S5: TESTIMONIALS ── -->
+        <div class="cin-scene" id="am-s5" style="background:#0D2B1A;padding:14px 12px;display:flex;flex-direction:column;gap:9px;">
+          <div style="animation:cin-rise 600ms 100ms both;">
+            <div style="font-size:6px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(200,164,74,.5);font-family:'Inter',sans-serif;margin-bottom:4px;">Verified Reviews</div>
+            <div style="font-size:20px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:.9;font-family:'Inter',sans-serif;">What They <span style="color:#C8A44A;font-style:italic;">Say.</span></div>
+          </div>
+          <!-- review cards -->
+          <div style="display:flex;flex-direction:column;gap:6px;flex:1;">
+            <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px 11px;animation:cin-rise 600ms 200ms both;">
+              <div style="display:flex;gap:1px;margin-bottom:5px;">
+                <span style="font-size:8px;color:#C8A44A;">★★★★★</span>
+              </div>
+              <p style="font-size:7.5px;color:rgba(255,255,255,.65);font-family:'Inter',sans-serif;line-height:1.65;font-style:italic;">"The Qasil powder has completely transformed my skin. Softer, brighter in just two weeks."</p>
+              <div style="margin-top:6px;display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:7px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;">Faadumo Ahmed</span>
+                <span style="font-size:6px;color:rgba(255,255,255,.3);font-family:'Inter',sans-serif;">Hargeisa · Verified</span>
+              </div>
+            </div>
+            <div style="background:rgba(200,164,74,.07);border:1px solid rgba(200,164,74,.15);border-radius:12px;padding:10px 11px;animation:cin-rise 600ms 320ms both;">
+              <div style="display:flex;gap:1px;margin-bottom:5px;">
+                <span style="font-size:8px;color:#C8A44A;">★★★★★</span>
+              </div>
+              <p style="font-size:7.5px;color:rgba(255,255,255,.65);font-family:'Inter',sans-serif;line-height:1.65;font-style:italic;">"Frankincense Boswellia is a gem. The scent is divine — done wonders for fine lines."</p>
+              <div style="margin-top:6px;display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:7px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;">Ifrah Mohamed</span>
+                <span style="font-size:6px;color:rgba(255,255,255,.3);font-family:'Inter',sans-serif;">Hargeisa · Verified</span>
+              </div>
+            </div>
+            <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px 11px;animation:cin-rise 600ms 440ms both;">
+              <div style="display:flex;gap:1px;margin-bottom:5px;">
+                <span style="font-size:8px;color:#C8A44A;">★★★★★</span>
+              </div>
+              <p style="font-size:7.5px;color:rgba(255,255,255,.65);font-family:'Inter',sans-serif;line-height:1.65;font-style:italic;">"Genuinely 100% natural — you can tell by the texture and smell. Now a weekly ritual."</p>
+              <div style="margin-top:6px;display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:7px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;">Asha Farah</span>
+                <span style="font-size:6px;color:rgba(255,255,255,.3);font-family:'Inter',sans-serif;">Hargeisa · Verified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── S6: CTA ── -->
+        <div class="cin-scene" id="am-s6" style="background:#0D2B1A;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;position:relative;">
+          <div style="position:absolute;inset:0;opacity:.04;background:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 1px,transparent 12px);"></div>
+          <!-- background product image -->
+          <div style="position:absolute;inset:0;overflow:hidden;">
+            <img src="asli-mills-images/Make_background_aesthetic_202605081923.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.18;animation:cin-kb-gentle 6s cubic-bezier(0.23,1,0.32,1) both;">
+          </div>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,43,26,.97) 0%,rgba(13,43,26,.85) 50%,rgba(13,43,26,.75) 100%);"></div>
+          <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:10px;">
+            <div style="font-size:6px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:rgba(200,164,74,.5);font-family:'Inter',sans-serif;animation:cin-fade 500ms 200ms both;">Your Skin Deserves Better</div>
+            <div style="font-size:30px;font-weight:900;color:#fff;line-height:.88;letter-spacing:-1.5px;font-family:'Inter',sans-serif;animation:cin-rise 700ms 300ms both;">Order<br>via<br><span style="color:#C8A44A;font-style:italic;">WhatsApp.</span></div>
+            <p style="font-size:7.5px;color:rgba(255,255,255,.45);font-family:'Inter',sans-serif;line-height:1.6;max-width:22ch;animation:cin-fade 600ms 500ms both;">One tap. No forms. Fresh from Hargeisa to your door.</p>
+            <div style="background:#3AAF6F;border-radius:100px;padding:10px 22px;display:flex;align-items:center;gap:6px;animation:cin-rise 600ms 650ms both;">
+              <span style="font-size:9.5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;">💬 Order Now</span>
+            </div>
+            <div style="font-size:6px;color:rgba(255,255,255,.2);font-family:'Inter',sans-serif;letter-spacing:2px;text-transform:uppercase;animation:cin-fade 500ms 800ms both;">Sat–Thu 10:00–23:00</div>
+          </div>
+        </div>
+
+        <!-- ── S7: END CARD ── -->
+        <div class="cin-scene" id="am-s7" style="background:#030a04;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
+          <img src="asli-mills-images/download.png" alt="Asli Mills" style="width:90px;height:90px;object-fit:contain;animation:cin-fade 800ms 300ms both;filter:brightness(1.1);">
+          <div style="font-size:7px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(200,164,74,.45);font-family:'Inter',sans-serif;animation:cin-fade 600ms 600ms both;">aslimills.com</div>
+          <div style="display:flex;align-items:center;gap:4px;animation:cin-fade 500ms 800ms both;">
+            <span style="width:4px;height:4px;border-radius:50%;background:#4ade80;display:inline-block;"></span>
+            <span style="font-size:6px;color:rgba(255,255,255,.18);font-family:'Inter',sans-serif;letter-spacing:2px;text-transform:uppercase;">System Operational</span>
+          </div>
+        </div>
+
+      </div><!-- /am screen -->
+    </div>
+  </div>
+
+</div>
+<script>
+(function () {
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.querySelectorAll('.wd-bullet').forEach(function (b) { b.classList.add('wd-vis'); });
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.25 });
+  var c = document.querySelector('.wd-bullets');
+  if (c) io.observe(c);
+})();
+
+/* ── Asli Mills Cinematic Scene Controller ── */
+(function () {
+  var SCENES = [
+    { id: 'am-s1', dur: 2500  },
+    { id: 'am-s2', dur: 7000  },
+    { id: 'am-s3', dur: 5500  },
+    { id: 'am-s4', dur: 5000  },
+    { id: 'am-s5', dur: 5000  },
+    { id: 'am-s6', dur: 4500  },
+    { id: 'am-s7', dur: 3000  },
+  ];
+  var TOTAL = SCENES.reduce(function (s, sc) { return s + sc.dur; }, 0);
+  var phone = document.getElementById('am-cin-phone');
+  var progressBar = document.getElementById('am-cin-progress');
+  if (!phone) return;
+  var sceneEls = SCENES.map(function (sc) { return document.getElementById(sc.id); });
+  var timers = [];
+  var running = false;
+  var startTime = 0;
+  var rafId = null;
+
+  function clearTimers() {
+    timers.forEach(function (t) { clearTimeout(t); });
+    timers = [];
+    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+  }
+  function showScene(index) {
+    sceneEls.forEach(function (el, i) {
+      if (!el) return;
+      el.classList.toggle('cin-active', i === index);
+    });
+  }
+  function animateProgress() {
+    function tick() {
+      var pct = Math.min((Date.now() - startTime) / TOTAL * 100, 100);
+      if (progressBar) progressBar.style.width = pct + '%';
+      if (pct < 100) rafId = requestAnimationFrame(tick);
+    }
+    rafId = requestAnimationFrame(tick);
+  }
+  function playSequence() {
+    clearTimers();
+    if (progressBar) progressBar.style.width = '0%';
+    startTime = Date.now();
+    animateProgress();
+    var offset = 0;
+    SCENES.forEach(function (sc, i) {
+      var t = setTimeout(function () { showScene(i); }, offset);
+      timers.push(t);
+      offset += sc.dur;
+    });
+    timers.push(setTimeout(function () { if (running) playSequence(); }, offset));
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting && !running) {
+        running = true; playSequence();
+      } else if (!e.isIntersecting && running) {
+        running = false; clearTimers(); showScene(-1);
+        if (progressBar) progressBar.style.width = '0%';
+      }
+    });
+  }, { threshold: 0.3 });
+  observer.observe(phone);
+})();
+</script>
+
+
+<!-- ════════════════════════════════════════
+     BEYDAN COFFEE — Website Design Case Study
+════════════════════════════════════════ -->
+<div class="slide wd-case-slide" style="background:linear-gradient(160deg,#0a0a14 0%,#111417 55%,#0a0a14 100%); border-top:1px solid rgba(235,176,18,.12); padding:52px 64px; display:grid; grid-template-columns:1fr 252px; gap:72px; align-items:center; height:740px;">
+
+  <div style="display:flex; flex-direction:column; gap:28px;">
+
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+        <span style="width:18px;height:2px;background:#EBB012;display:inline-block;flex-shrink:0;"></span>
+        <span style="font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.3);">Case Study · 2026</span>
+      </div>
+      <div style="font-size:60px;font-weight:900;color:#fff;letter-spacing:-3px;line-height:.95;">Beydan Coffee</div>
+      <div style="font-size:12px;font-weight:300;color:rgba(255,255,255,.35);margin-top:10px;letter-spacing:2px;text-transform:uppercase;">Brew. Culture. Vibe. — Somalia</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;">
+        <a href="https://levelup-studio1.github.io/beydan-coffee-site" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#EBB012;color:#111;font-size:10px;font-weight:700;padding:10px 22px;border-radius:3px;text-decoration:none;letter-spacing:2px;text-transform:uppercase;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),box-shadow 160ms cubic-bezier(0.23,1,0.32,1);">View Live Site ↗</a>
+      </div>
+    </div>
+
+    <div style="width:32px;height:1px;background:rgba(255,255,255,.12);"></div>
+
+    <div>
+      <div style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:12px;">About the Project</div>
+      <div style="font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.85;">
+        A full cinematic website for Beydan Coffee — Africa's modern coffeehouse, born in Somalia.
+        Rich motion design, animated product reveals, and an interactive locations map
+        built to match the brand's premium energy.
+      </div>
+    </div>
+
+    <div>
+      <div style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:14px;">What Was Delivered</div>
+      <div class="bd-bullets-wrap" style="display:flex;flex-direction:column;gap:10px;border-left:2px solid rgba(235,176,18,.25);padding-left:16px;">
+        <div class="bd-bullet" style="display:flex;gap:12px;align-items:flex-start;">
+          <span style="color:#EBB012;font-weight:900;font-size:14px;flex-shrink:0;line-height:1.65;">→</span>
+          <span style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65;">Cinematic hero with GSAP scroll-triggered animations throughout</span>
+        </div>
+        <div class="bd-bullet" style="display:flex;gap:12px;align-items:flex-start;">
+          <span style="color:#EBB012;font-weight:900;font-size:14px;flex-shrink:0;line-height:1.65;">→</span>
+          <span style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65;">Sticky stacking protocol cards — each section pins and scales away</span>
+        </div>
+        <div class="bd-bullet" style="display:flex;gap:12px;align-items:flex-start;">
+          <span style="color:#EBB012;font-weight:900;font-size:14px;flex-shrink:0;line-height:1.65;">→</span>
+          <span style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65;">Interactive locations map for Mogadishu, Hargeisa &amp; Garowe</span>
+        </div>
+        <div class="bd-bullet" style="display:flex;gap:12px;align-items:flex-start;">
+          <span style="color:#EBB012;font-weight:900;font-size:14px;flex-shrink:0;line-height:1.65;">→</span>
+          <span style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65;">Animated tape ribbon, testimonials carousel, and menu grid</span>
+        </div>
+        <div class="bd-bullet" style="display:flex;gap:12px;align-items:flex-start;">
+          <span style="color:#EBB012;font-weight:900;font-size:14px;flex-shrink:0;line-height:1.65;">→</span>
+          <span style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65;">Full brand system — Space Grotesk + DM Serif, gold &amp; red palette</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Beydan animated phone -->
+  <div class="wd-phone" style="display:flex;align-items:center;justify-content:flex-end;height:100%;">
+    <div style="width:252px;background:#1c1c1e;border-radius:40px;border:6px solid #2c2c2e;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,.75), 0 0 0 1px rgba(255,255,255,.04), 0 8px 60px rgba(235,176,18,.12);">
+      <!-- notch -->
+      <div style="background:#1c1c1e;height:24px;display:flex;align-items:center;justify-content:center;">
+        <div style="width:56px;height:5px;border-radius:3px;background:rgba(255,255,255,.1);"></div>
+      </div>
+      <!-- chrome -->
+      <div style="background:#2c2c2e;padding:5px 10px;display:flex;align-items:center;gap:6px;">
+        <div style="display:flex;gap:3px;flex-shrink:0;">
+          <span style="width:5px;height:5px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
+          <span style="width:5px;height:5px;border-radius:50%;background:#febc2e;display:inline-block;"></span>
+          <span style="width:5px;height:5px;border-radius:50%;background:#28c840;display:inline-block;"></span>
+        </div>
+        <div style="flex:1;background:#3a3a3c;border-radius:4px;padding:3px 8px;display:flex;align-items:center;gap:4px;">
+          <span style="font-size:7px;color:#8e8e93;">🔒</span>
+          <span style="font-size:8px;font-weight:600;color:rgba(255,255,255,.55);font-family:'Inter',sans-serif;letter-spacing:.2px;">beydancoffee.com</span>
+        </div>
+        <!-- live indicator -->
+        <div style="display:flex;align-items:center;gap:3px;flex-shrink:0;">
+          <span class="bd-live-dot" style="width:5px;height:5px;border-radius:50%;background:#4ade80;display:inline-block;"></span>
+          <span style="font-size:7px;font-weight:700;color:rgba(255,255,255,.3);letter-spacing:.5px;text-transform:uppercase;">Live</span>
+        </div>
+      </div>
+      <!-- CINEMATIC SCREEN CONTAINER -->
+      <div id="cin-phone" style="width:240px;height:480px;overflow:hidden;position:relative;background:#0a0a0a;">
+
+        <!-- progress bar -->
+        <div class="cin-progress-bar" id="cin-progress"></div>
+
+        <!-- ── SCENE 1: TITLE CARD ── -->
+        <div class="cin-scene" id="cin-s1" style="background:#060608;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
+          <div style="font-size:6.5px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(235,176,18,.5);font-family:'Inter',sans-serif;animation:cin-fade 600ms 300ms both;">Website Redesign</div>
+          <img src="beydan-coffee/public/images/beydan new logo.png" alt="Beydan" style="width:72px;height:72px;object-fit:contain;animation:cin-fade 700ms 200ms both;">
+          <div style="font-size:22px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:.9;font-family:'Inter',sans-serif;text-align:center;animation:cin-rise 700ms 400ms both;">Beydan<br><span style="color:#EBB012;">Coffee</span></div>
+          <div style="width:24px;height:1px;background:rgba(235,176,18,.4);animation:cin-fade 600ms 700ms both;"></div>
+          <div style="font-size:7px;color:rgba(255,255,255,.3);font-family:'Inter',sans-serif;letter-spacing:3px;text-transform:uppercase;animation:cin-fade 600ms 800ms both;">2026</div>
+        </div>
+
+        <!-- ── SCENE 2: HERO ── -->
+        <div class="cin-scene" id="cin-s2" style="background:#060608;">
+          <!-- Ken Burns hero image -->
+          <img src="beydan-coffee/public/images/beydan image 2.png" alt="" class="cin-img" id="cin-hero-img" style="animation:cin-kb-zoom-in 9s ease-in-out both;">
+          <!-- gradient overlays -->
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,#060608 28%,rgba(6,6,8,.4) 65%,transparent 100%);"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(6,6,8,.45) 0%,transparent 60%);"></div>
+          <!-- top nav pill -->
+          <div style="position:absolute;top:14px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.07);backdrop-filter:blur(14px);border-radius:100px;padding:4px 14px;white-space:nowrap;animation:cin-fade 600ms 400ms both;">
+            <span style="font-size:7.5px;font-weight:700;color:rgba(255,255,255,.65);font-family:'Inter',sans-serif;letter-spacing:.5px;">Beydan Coffee</span>
+          </div>
+          <!-- bottom content -->
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 14px 20px;">
+            <div style="font-size:6px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.4);font-family:'Inter',sans-serif;margin-bottom:5px;animation:cin-rise 600ms 300ms both;">Africa's Modern Coffeehouse</div>
+            <div style="font-size:26px;font-weight:900;color:#fff;line-height:.88;letter-spacing:-1.5px;font-family:'Inter',sans-serif;text-transform:uppercase;animation:cin-rise 700ms 450ms both;">BEST<br>COFFEE</div>
+            <div style="font-size:24px;font-weight:900;color:#fff;line-height:.9;letter-spacing:-1px;font-family:'Inter',sans-serif;text-transform:uppercase;margin-bottom:6px;animation:cin-rise 700ms 550ms both;">IN THE <span style="color:#EBB012;font-style:italic;">TOWN.</span></div>
+            <div style="font-size:7.5px;color:rgba(255,255,255,.4);font-family:'Inter',sans-serif;line-height:1.5;margin-bottom:12px;animation:cin-rise 600ms 700ms both;">Crafted with passion. Served with purpose.<br>Born in Somalia.</div>
+            <div style="display:flex;gap:6px;align-items:center;animation:cin-rise 600ms 850ms both;">
+              <div style="background:#A61F2E;border-radius:100px;padding:7px 14px;display:flex;align-items:center;gap:4px;">
+                <span style="font-size:8px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;">Explore Menu</span>
+                <span style="font-size:9px;color:rgba(255,255,255,.7);">→</span>
+              </div>
+              <div style="background:rgba(255,255,255,.08);border-radius:100px;padding:7px 10px;backdrop-filter:blur(8px);">
+                <span style="font-size:8px;font-weight:600;color:rgba(255,255,255,.55);font-family:'Inter',sans-serif;">Find Us</span>
+              </div>
+            </div>
+          </div>
+          <!-- open badge -->
+          <div style="position:absolute;bottom:20px;right:14px;width:38px;height:38px;border-radius:50%;background:#EBB012;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(12deg);animation:cin-fade 700ms 1000ms both;">
+            <span style="font-size:5.5px;font-weight:900;color:#111;text-align:center;line-height:1.25;font-family:'Inter',sans-serif;">OPEN<br>DAILY<br>7–00</span>
+          </div>
+        </div>
+
+        <!-- ── SCENE 3: TAPE RIBBON TRANSITION ── -->
+        <div class="cin-scene" id="cin-s3" style="background:#111417;display:flex;flex-direction:column;overflow:hidden;">
+          <!-- hero image with pan -->
+          <div style="flex:1;overflow:hidden;position:relative;">
+            <img src="beydan-coffee/public/images/beydan image1.png" alt="" class="cin-img" style="animation:cin-kb-pan-up 5s ease-in-out both;">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,#111417 100%);"></div>
+            <!-- 11 locations badge bottom-left -->
+            <div style="position:absolute;bottom:8px;left:8px;background:#EBB012;border-radius:8px;padding:4px 8px;animation:cin-rise 500ms 300ms both;">
+              <span style="font-size:6.5px;font-weight:700;color:#111;font-family:'Inter',sans-serif;letter-spacing:1px;text-transform:uppercase;">11 Locations</span>
+            </div>
+          </div>
+          <!-- tape ribbon -->
+          <div style="background:#EBB012;padding:8px 0;overflow:hidden;flex-shrink:0;transform:rotate(-1deg);margin:-4px 0;">
+            <div style="display:flex;width:max-content;animation:cin-tape-scroll 5s linear infinite;">
+              <span style="font-size:7px;font-weight:900;color:#111;font-family:'Inter',sans-serif;text-transform:uppercase;letter-spacing:3px;white-space:nowrap;padding:0 14px;">✦ Beydan Coffee ✦ Somalia Born ✦ Artisanal Roasting ✦ Est. 2018 ✦ 11 Locations ✦ Fresh Baked Daily ✦ Beydan Coffee ✦ Somalia Born ✦ Artisanal Roasting ✦ Est. 2018 ✦ 11 Locations ✦ Fresh Baked Daily</span>
+            </div>
+          </div>
+          <!-- stats row -->
+          <div style="background:#F5F0E8;padding:10px 14px;display:flex;gap:0;flex-shrink:0;">
+            <div style="flex:1;text-align:center;">
+              <div style="font-size:16px;font-weight:900;color:#A61F2E;font-family:'Inter',sans-serif;line-height:1;">11+</div>
+              <div style="font-size:5.5px;color:#111417;font-family:'Inter',sans-serif;letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;opacity:.45;">Locations</div>
+            </div>
+            <div style="flex:1;text-align:center;border-left:1px solid rgba(0,0,0,.08);border-right:1px solid rgba(0,0,0,.08);">
+              <div style="font-size:16px;font-weight:900;color:#A61F2E;font-family:'Inter',sans-serif;line-height:1;">7</div>
+              <div style="font-size:5.5px;color:#111417;font-family:'Inter',sans-serif;letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;opacity:.45;">Brew Methods</div>
+            </div>
+            <div style="flex:1;text-align:center;">
+              <div style="font-size:14px;font-weight:900;color:#A61F2E;font-family:'Inter',sans-serif;line-height:1;">2018</div>
+              <div style="font-size:5.5px;color:#111417;font-family:'Inter',sans-serif;letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;opacity:.45;">Est. Year</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SCENE 4: STORY ── full-bleed -->
+        <div class="cin-scene" id="cin-s4" style="background:#0a0008;">
+          <!-- full-bleed model image, slow pan -->
+          <img src="beydan-coffee/public/images/beydan model 2.png" alt="" class="cin-img" style="object-position:center top;animation:cin-kb-pan-up 8s cubic-bezier(0.23,1,0.32,1) both;">
+          <!-- bottom-to-top gradient: deep red-black, opaque at bottom, fades at top -->
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,0,4,.97) 0%,rgba(80,6,22,.72) 45%,rgba(166,31,46,.25) 75%,transparent 100%);"></div>
+          <!-- left-edge vignette so text pops -->
+          <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(6,0,2,.55) 0%,transparent 55%);"></div>
+          <!-- top label -->
+          <div style="position:absolute;top:16px;left:14px;animation:cin-fade 500ms 150ms both;">
+            <span style="font-size:6px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.3);font-family:'Inter',sans-serif;">Est. Somalia, 2018</span>
+          </div>
+          <!-- main text block — positioned in lower third -->
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 16px 22px;">
+            <div style="animation:cin-rise 700ms 250ms cubic-bezier(0.23,1,0.32,1) both;">
+              <div style="font-size:34px;font-weight:900;color:#fff;line-height:.85;letter-spacing:-2px;font-family:'Inter',sans-serif;text-transform:uppercase;">Not just<br>coffee.</div>
+              <div style="font-size:30px;font-style:italic;color:#EBB012;line-height:.9;font-family:Georgia,serif;margin-top:6px;letter-spacing:-.5px;">A culture.</div>
+            </div>
+            <p style="font-size:8px;color:rgba(255,255,255,.5);font-family:'Inter',sans-serif;line-height:1.65;margin-top:14px;max-width:26ch;animation:cin-rise 600ms 450ms cubic-bezier(0.23,1,0.32,1) both;">A modern Pan-African coffee company redefining café culture — rooted in craftsmanship and community since 2018.</p>
+            <!-- stats strip -->
+            <div style="display:flex;gap:10px;margin-top:14px;animation:cin-rise 600ms 600ms cubic-bezier(0.23,1,0.32,1) both;">
+              <div style="background:rgba(235,176,18,.12);border:1px solid rgba(235,176,18,.22);border-radius:10px;padding:7px 10px;display:flex;flex-direction:column;align-items:center;min-width:44px;">
+                <span style="font-size:16px;font-weight:900;color:#EBB012;font-family:'Inter',sans-serif;line-height:1;">11+</span>
+                <span style="font-size:5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'Inter',sans-serif;margin-top:2px;">Locations</span>
+              </div>
+              <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:7px 10px;display:flex;flex-direction:column;align-items:center;min-width:44px;">
+                <span style="font-size:16px;font-weight:900;color:#fff;font-family:'Inter',sans-serif;line-height:1;">7</span>
+                <span style="font-size:5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'Inter',sans-serif;margin-top:2px;">Brews</span>
+              </div>
+              <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:7px 10px;display:flex;flex-direction:column;align-items:center;min-width:44px;">
+                <span style="font-size:16px;font-weight:900;color:#fff;font-family:'Inter',sans-serif;line-height:1;">2018</span>
+                <span style="font-size:5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'Inter',sans-serif;margin-top:2px;">Est.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SCENE 5: MENU ── -->
+        <div class="cin-scene" id="cin-s5" style="background:#111417;padding:14px 12px;display:flex;flex-direction:column;gap:10px;">
+          <div style="animation:cin-rise 600ms 100ms both;">
+            <div style="font-size:6.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.25);font-family:'Inter',sans-serif;margin-bottom:4px;">What We Serve</div>
+            <div style="font-size:20px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:.9;font-family:'Inter',sans-serif;">The <span style="color:#EBB012;font-style:italic;">Menu.</span></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;flex:1;">
+            <div style="border-radius:14px;overflow:hidden;position:relative;animation:cin-rise 600ms 200ms both;">
+              <img src="beydan-coffee/public/images/beydan image 4.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+              <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,8,.92) 38%,transparent 65%);"></div>
+              <div style="position:absolute;top:5px;left:5px;background:#EBB012;border-radius:100px;padding:2px 5px;"><span style="font-size:5px;font-weight:700;color:#111;font-family:'Inter',sans-serif;letter-spacing:.5px;">BESTSELLER</span></div>
+              <div style="position:absolute;bottom:6px;left:7px;right:5px;">
+                <div style="font-size:7.5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;line-height:1.2;">Signature Frappes</div>
+                <div style="font-size:6.5px;color:#EBB012;font-family:'Inter',sans-serif;margin-top:1px;">From $3.50</div>
+              </div>
+            </div>
+            <div style="border-radius:14px;overflow:hidden;position:relative;animation:cin-rise 600ms 280ms both;">
+              <img src="beydan-coffee/public/images/beydan image 8.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+              <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,8,.92) 38%,transparent 65%);"></div>
+              <div style="position:absolute;top:5px;left:5px;background:rgba(255,255,255,.14);backdrop-filter:blur(4px);border-radius:100px;padding:2px 5px;"><span style="font-size:5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;letter-spacing:.5px;">TRENDING</span></div>
+              <div style="position:absolute;bottom:6px;left:7px;right:5px;">
+                <div style="font-size:7.5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;line-height:1.2;">Iced Spanish<br>Latte</div>
+                <div style="font-size:6.5px;color:#EBB012;font-family:'Inter',sans-serif;margin-top:1px;">$4.00</div>
+              </div>
+            </div>
+            <div style="border-radius:14px;overflow:hidden;position:relative;animation:cin-rise 600ms 360ms both;">
+              <img src="beydan-coffee/public/images/beydan image 5.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+              <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,8,.92) 38%,transparent 65%);"></div>
+              <div style="position:absolute;top:5px;left:5px;background:rgba(166,31,46,.75);border-radius:100px;padding:2px 5px;"><span style="font-size:5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;letter-spacing:.5px;">SIGNATURE</span></div>
+              <div style="position:absolute;bottom:6px;left:7px;right:5px;">
+                <div style="font-size:7.5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;line-height:1.2;">Qaxwo Somali</div>
+                <div style="font-size:6.5px;color:#EBB012;font-family:'Inter',sans-serif;margin-top:1px;">$3.50</div>
+              </div>
+            </div>
+            <div style="border-radius:14px;overflow:hidden;position:relative;animation:cin-rise 600ms 440ms both;">
+              <img src="beydan-coffee/public/images/beydan image 6.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+              <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,8,.92) 38%,transparent 65%);"></div>
+              <div style="position:absolute;top:5px;left:5px;background:rgba(255,255,255,.14);backdrop-filter:blur(4px);border-radius:100px;padding:2px 5px;"><span style="font-size:5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;letter-spacing:.5px;">FAN FAV</span></div>
+              <div style="position:absolute;bottom:6px;left:7px;right:5px;">
+                <div style="font-size:7.5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;line-height:1.2;">Lotus Tres<br>Leches</div>
+                <div style="font-size:6.5px;color:#EBB012;font-family:'Inter',sans-serif;margin-top:1px;">$5.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SCENE 6: LOCATIONS ── full-bleed -->
+        <div class="cin-scene" id="cin-s6" style="background:#060608;">
+          <!-- full-bleed background image, slow pan -->
+          <img src="beydan-coffee/public/images/beydan image 9.png" alt="" class="cin-img" style="object-position:center center;animation:cin-kb-pan-right 8s cubic-bezier(0.23,1,0.32,1) both;">
+          <!-- dark gradient: strong at bottom, lighter at top -->
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(4,4,6,.98) 0%,rgba(4,4,6,.80) 40%,rgba(4,4,6,.35) 70%,transparent 100%);"></div>
+          <!-- top label -->
+          <div style="position:absolute;top:16px;left:14px;animation:cin-fade 500ms 150ms both;">
+            <span style="font-size:6px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.3);font-family:'Inter',sans-serif;">Across Somalia</span>
+          </div>
+          <!-- big headline mid-scene -->
+          <div style="position:absolute;top:50%;left:14px;right:14px;transform:translateY(-100%);animation:cin-rise 700ms 200ms cubic-bezier(0.23,1,0.32,1) both;">
+            <div style="font-size:7px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.25);font-family:'Inter',sans-serif;margin-bottom:5px;">11 Locations</div>
+            <div style="font-size:38px;font-weight:900;color:#fff;line-height:.85;letter-spacing:-2.5px;font-family:'Inter',sans-serif;">Find<br><span style="color:#EBB012;font-style:italic;">Beydan.</span></div>
+          </div>
+          <!-- city cards panel — frosted, floating at bottom -->
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 12px 14px;display:flex;flex-direction:column;gap:5px;animation:cin-rise 600ms 400ms cubic-bezier(0.23,1,0.32,1) both;">
+            <div style="background:rgba(235,176,18,.10);backdrop-filter:blur(12px);border:1px solid rgba(235,176,18,.2);border-radius:12px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center;">
+              <div>
+                <div style="font-size:9.5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;letter-spacing:-.2px;">Mogadishu</div>
+                <div style="font-size:6.5px;color:rgba(255,255,255,.35);font-family:'Inter',sans-serif;margin-top:1px;">Somalia</div>
+              </div>
+              <div style="background:#EBB012;border-radius:7px;padding:3px 8px;"><span style="font-size:8px;font-weight:800;color:#111;font-family:'Inter',sans-serif;">7</span></div>
+            </div>
+            <div style="background:rgba(255,255,255,.07);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center;">
+              <div>
+                <div style="font-size:9.5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;letter-spacing:-.2px;">Hargeisa</div>
+                <div style="font-size:6.5px;color:rgba(255,255,255,.35);font-family:'Inter',sans-serif;margin-top:1px;">Somaliland</div>
+              </div>
+              <div style="background:rgba(255,255,255,.15);border-radius:7px;padding:3px 8px;"><span style="font-size:8px;font-weight:800;color:rgba(255,255,255,.75);font-family:'Inter',sans-serif;">2</span></div>
+            </div>
+            <div style="background:rgba(255,255,255,.07);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center;">
+              <div>
+                <div style="font-size:9.5px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;letter-spacing:-.2px;">Garowe</div>
+                <div style="font-size:6.5px;color:rgba(255,255,255,.35);font-family:'Inter',sans-serif;margin-top:1px;">Puntland</div>
+              </div>
+              <div style="background:rgba(255,255,255,.15);border-radius:7px;padding:3px 8px;"><span style="font-size:8px;font-weight:800;color:rgba(255,255,255,.75);font-family:'Inter',sans-serif;">2</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SCENE 7: CTA ── -->
+        <div class="cin-scene" id="cin-s7" style="background:#A61F2E;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;">
+          <div style="position:absolute;inset:0;opacity:.07;background:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 1px,transparent 10px);"></div>
+          <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:10px;">
+            <div style="font-size:6.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.4);font-family:'Inter',sans-serif;animation:cin-fade 500ms 200ms both;">Come Find Us</div>
+            <div style="font-size:28px;font-weight:900;color:#fff;line-height:.88;letter-spacing:-1.5px;font-family:'Inter',sans-serif;animation:cin-rise 700ms 300ms both;">Your<br>table<br><span style="font-style:italic;">awaits.</span></div>
+            <div style="font-size:7.5px;color:rgba(255,255,255,.55);font-family:'Inter',sans-serif;line-height:1.6;max-width:22ch;animation:cin-fade 600ms 500ms both;">Step inside. Order something bold. Stay longer than you planned.</div>
+            <div style="font-size:6px;font-weight:700;letter-spacing:2.5px;color:rgba(255,255,255,.3);font-family:'Inter',sans-serif;text-transform:uppercase;animation:cin-fade 500ms 600ms both;">SAT–WED 07:00–00:00</div>
+            <div style="background:#EBB012;border-radius:100px;padding:9px 20px;display:flex;align-items:center;gap:6px;animation:cin-rise 600ms 700ms both;">
+              <span style="font-size:9px;font-weight:700;color:#111;font-family:'Inter',sans-serif;">📍 Find a Store</span>
+              <span style="font-size:10px;color:#111;">→</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SCENE 8: END CARD ── -->
+        <div class="cin-scene" id="cin-s8" style="background:#060608;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
+          <img src="beydan-coffee/public/images/beydan new logo.png" alt="Beydan Coffee" style="width:80px;height:80px;object-fit:contain;animation:cin-fade 800ms 300ms both;">
+          <div style="font-size:7px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(235,176,18,.5);font-family:'Inter',sans-serif;animation:cin-fade 600ms 600ms both;">beydancoffee.com</div>
+          <div style="display:flex;align-items:center;gap:4px;animation:cin-fade 500ms 800ms both;">
+            <span style="width:4px;height:4px;border-radius:50%;background:#4ade80;display:inline-block;"></span>
+            <span style="font-size:6px;color:rgba(255,255,255,.2);font-family:'Inter',sans-serif;letter-spacing:2px;text-transform:uppercase;">System Operational</span>
+          </div>
+        </div>
+
+      </div><!-- /screen container -->
+    </div><!-- /phone frame -->
+  </div><!-- /phone wrapper -->
+
+</div>
+<script>
+/* ── Beydan Bullets ── */
+(function () {
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.querySelectorAll('.bd-bullet').forEach(function (b) { b.classList.add('bd-vis'); });
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.25 });
+  var c = document.querySelector('.bd-bullets-wrap');
+  if (c) io.observe(c);
+})();
+
+/* ── Cinematic Phone Scene Controller ── */
+(function () {
+  var SCENES = [
+    { id: 'cin-s1', dur: 2500  },  // title card
+    { id: 'cin-s2', dur: 7000  },  // hero
+    { id: 'cin-s3', dur: 5000  },  // tape / stats
+    { id: 'cin-s4', dur: 5500  },  // story
+    { id: 'cin-s5', dur: 5000  },  // menu
+    { id: 'cin-s6', dur: 5000  },  // locations
+    { id: 'cin-s7', dur: 4000  },  // cta
+    { id: 'cin-s8', dur: 3500  },  // end
+  ];
+  var TOTAL = SCENES.reduce(function (s, sc) { return s + sc.dur; }, 0);
+
+  var phone = document.getElementById('cin-phone');
+  var progressBar = document.getElementById('cin-progress');
+  if (!phone) return;
+
+  var sceneEls = SCENES.map(function (sc) { return document.getElementById(sc.id); });
+
+  var currentIndex = -1;
+  var timers = [];
+  var running = false;
+  var startTime = 0;
+  var rafId = null;
+
+  function clearTimers() {
+    timers.forEach(function (t) { clearTimeout(t); });
+    timers = [];
+    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+  }
+
+  function showScene(index) {
+    sceneEls.forEach(function (el, i) {
+      if (!el) return;
+      el.classList.toggle('cin-active', i === index);
+    });
+    currentIndex = index;
+  }
+
+  function animateProgress() {
+    function tick() {
+      var elapsed = Date.now() - startTime;
+      var pct = Math.min(elapsed / TOTAL * 100, 100);
+      if (progressBar) progressBar.style.width = pct + '%';
+      if (pct < 100) {
+        rafId = requestAnimationFrame(tick);
+      }
+    }
+    rafId = requestAnimationFrame(tick);
+  }
+
+  function playSequence() {
+    clearTimers();
+    if (progressBar) progressBar.style.width = '0%';
+    startTime = Date.now();
+    animateProgress();
+
+    var offset = 0;
+    SCENES.forEach(function (sc, i) {
+      var t = setTimeout(function () { showScene(i); }, offset);
+      timers.push(t);
+      offset += sc.dur;
+    });
+    /* loop: restart after last scene ends */
+    var loopTimer = setTimeout(function () {
+      if (running) playSequence();
+    }, offset);
+    timers.push(loopTimer);
+  }
+
+  /* Start on scroll-into-view */
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting && !running) {
+        running = true;
+        playSequence();
+      } else if (!e.isIntersecting && running) {
+        running = false;
+        clearTimers();
+        showScene(-1);
+        if (progressBar) progressBar.style.width = '0%';
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(phone);
+})();
+</script>
+
+
+<!-- ════════════════════════════════════════
+     CLOSING
+════════════════════════════════════════ -->
+<div class="slide closing">
+  <div class="slide-header">
+    <span class="slide-label">Creative Portfolio</span>
+    <span class="slide-year">2025 — 2026</span>
+  </div>
+  <div>
+    <div class="closing-big">Thank<br><span>You.</span></div>
+  </div>
+  <div class="closing-bottom">
+    <div>
+      <div class="closing-name">Abeer Abdallah Jama</div>
+      <div class="closing-year">Portfolio · 2026</div>
+    </div>
+    <div class="closing-contacts">
+      <div class="closing-contact">abeerabdallah091@gmail.com</div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function () {
+  var singles = [
+    ['.about .about-big-word',  'left',  0],
+    ['.about-arrow',            'fade',  220],
+    ['.about-text',             'up',    340],
+    ['.about-name-line',        'up',    450],
+    ['.about-me .me-big',       'left',  0],
+    ['.exp-big-word',           'left',  0],
+    ['.exp-content',            'up',    210],
+    ['.section-num',            'up',    0],
+    ['.section-big',            'up',    160],
+    ['.img-full',               'fade',  0],
+    ['.ib-text',                'left',  0],
+    ['.ib-img',                 'right', 170],
+    ['.caption-bar',            'up',    0],
+    ['.slide-header',           'fade',  0],
+    ['.closing-big',            'up',    80],
+    ['.closing-bottom',         'up',    360],
+  ];
+
+  var staggered = [
+    ['.me-card',    'up', 95],
+    ['.exp-stat',   'up', 160],
+    ['.skill-card', 'up', 78],
+    ['.sw-card',    'up', 58],
+    ['.img-col',    'up', 105],
+    ['.edu-left',   'left', 0],
+    ['.edu-right',  'right', 0],
+  ];
+
+  function apply(el, dir, delayMs) {
+    el.setAttribute('data-reveal', dir);
+    el.style.transitionDelay = delayMs + 'ms';
+  }
+
+  singles.forEach(function (g) {
+    document.querySelectorAll(g[0]).forEach(function (el) {
+      apply(el, g[1], g[2]);
+    });
+  });
+
+  staggered.forEach(function (g) {
+    document.querySelectorAll(g[0]).forEach(function (el, i) {
+      apply(el, g[1], i * g[2]);
+    });
+  });
+
+  var revealIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in-view');
+      revealIO.unobserve(entry.target);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+
+  document.querySelectorAll('[data-reveal]').forEach(function (el) {
+    revealIO.observe(el);
+  });
+
+  var counterIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      var raw = el.textContent.trim();
+      var suffix = raw.replace(/[0-9]/g, '');
+      var target = parseInt(raw, 10);
+      if (isNaN(target)) return;
+      var start = null;
+      var duration = 1400;
+      function tick(ts) {
+        if (!start) start = ts;
+        var p = Math.min((ts - start) / duration, 1);
+        el.textContent = Math.floor(p * target) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      counterIO.unobserve(el);
+    });
+  }, { threshold: 0.6 });
+
+  document.querySelectorAll('.exp-stat-num').forEach(function (el) {
+    counterIO.observe(el);
+  });
+})();
+</script>
+</body>
+</html>
