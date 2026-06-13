@@ -284,6 +284,8 @@ body {
   .about-name-line { margin-top: 20px; }
 
   .about-me { height: auto; padding: 40px 24px; }
+  .about-me > div:first-child { flex-direction: column !important; gap: 20px !important; align-items: flex-start !important; }
+  .about-me > div:first-child > div:last-child { max-width: 100% !important; padding-top: 0 !important; }
   .me-big { font-size: 20vw; letter-spacing: -2vw; }
   .me-grid { grid-template-columns: 1fr 1fr; margin-top: 20px; }
   .me-card { padding: 18px 14px; }
@@ -315,7 +317,7 @@ body {
 
   .section-intro { height: auto; min-height: 240px; padding: 40px 24px; }
   .section-big { font-size: 15vw !important; letter-spacing: -2vw !important; }
-  .wd-case-title { font-size: 11vw !important; letter-spacing: -2vw !important; }
+  .wd-case-title { font-size: 11vw !important; letter-spacing: 0px !important; }
 
   .img-full { width: 100%; }
   .img-row  { flex-direction: column; height: auto !important; }
@@ -655,17 +657,17 @@ body {
       <img src="images/redcar.jpg" alt="Cinematic red sports car" style="width:100%;height:100%;object-fit:cover;display:block;">
     </div>
     <div style="display:flex; gap:4px; flex-shrink:0;">
-      <div style="flex:1;background:#141414;padding:24px 12px;display:flex;flex-direction:column;align-items:center;gap:7px;border-top:2.5px solid #31A8FF;">
-        <span style="font-size:28px;font-weight:900;color:#31A8FF;letter-spacing:-1px;">Ps</span>
-        <span style="font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);">Photoshop</span>
+      <div style="flex:1;background:#141414;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:5px;border-top:2.5px solid #31A8FF;">
+        <span style="font-size:20px;font-weight:900;color:#31A8FF;letter-spacing:-1px;">Ps</span>
+        <span style="font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);">Photoshop</span>
       </div>
-      <div style="flex:1;background:#141414;padding:24px 12px;display:flex;flex-direction:column;align-items:center;gap:7px;border-top:2.5px solid #FF9A00;">
-        <span style="font-size:28px;font-weight:900;color:#FF9A00;letter-spacing:-1px;">Ai</span>
-        <span style="font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);">Illustrator</span>
+      <div style="flex:1;background:#141414;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:5px;border-top:2.5px solid #FF9A00;">
+        <span style="font-size:20px;font-weight:900;color:#FF9A00;letter-spacing:-1px;">Ai</span>
+        <span style="font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);">Illustrator</span>
       </div>
-      <div style="flex:1;background:#141414;padding:24px 12px;display:flex;flex-direction:column;align-items:center;gap:7px;border-top:2.5px solid #1DB588;">
-        <span style="font-size:24px;font-weight:900;color:#1DB588;letter-spacing:-1px;">FP</span>
-        <span style="font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);">Freepik</span>
+      <div style="flex:1;background:#141414;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:5px;border-top:2.5px solid #1DB588;">
+        <span style="font-size:18px;font-weight:900;color:#1DB588;letter-spacing:-1px;">FP</span>
+        <span style="font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);">Freepik</span>
       </div>
     </div>
     <div style="flex:1; overflow:hidden;">
@@ -690,7 +692,7 @@ body {
 <!-- ════════════════════════════════════════
      SECTION B · SOCIAL MEDIA CAMPAIGNS
 ════════════════════════════════════════ -->
-<div class="slide section-intro" style="background:#111; height:560px;">
+<div class="slide section-intro" style="background:#111; height:380px;">
   <div class="slide-header">
     <span class="slide-label">Creative Portfolio</span>
     <span class="slide-year">2025</span>
@@ -751,10 +753,10 @@ body {
 
 <div class="slide img-row" style="height:760px;">
   <div class="img-col" style="overflow:hidden;">
-    <img src="images/talabat.jpg" alt="Talabat fast delivery campaign" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <img src="images/talabat.jpg" alt="Talabat fast delivery campaign" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
   </div>
   <div class="img-col" style="overflow:hidden;">
-    <img src="images/keeta.jpg" alt="Keeta first order discount campaign" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <img src="images/keeta.jpg" alt="Keeta first order discount campaign" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
   </div>
 </div>
 <div class="slide caption-bar" style="background:#111;">
@@ -1016,7 +1018,7 @@ body {
         <span style="width:18px;height:2px;background:#2B2CE8;display:inline-block;flex-shrink:0;"></span>
         <span style="font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.3);">Case Study · 2026</span>
       </div>
-      <div class="wd-case-title" style="font-size:60px;font-weight:900;color:#fff;letter-spacing:-3px;line-height:.95;">Asli Mills</div>
+      <div class="wd-case-title" style="font-size:60px;font-weight:900;color:#fff;letter-spacing:0px;line-height:.95;">Asli Mills</div>
       <div style="font-size:12px;font-weight:300;color:rgba(255,255,255,.35);margin-top:10px;letter-spacing:2px;text-transform:uppercase;">100% Natural &amp; Organic — Somaliland</div>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;">
         <a href="https://levelup-studio1.github.io/asli-mills" target="_blank" rel="noopener" class="wd-cta" style="display:inline-flex;align-items:center;gap:8px;background:#2B2CE8;color:#fff;font-size:10px;font-weight:700;padding:10px 22px;border-radius:3px;text-decoration:none;letter-spacing:2px;text-transform:uppercase;">View Live Site ↗</a>
